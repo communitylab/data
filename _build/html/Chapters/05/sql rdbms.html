@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Relational Model &#8212; Data Science with Python</title>
+    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "github-org/github-repo");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/quantecon-book-theme.76bf49d7bbc59738cdb03766fad654af.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/DC-2.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="SQL" href="sql%20basics.html" />
+    <link rel="prev" title="7. Relational Databases and SQL" href="sql%20intro.html" />
+
+<!-- Normal Meta Tags -->
+<meta name="author" context="Ashray Shetty" />
+<meta name="keywords" content="" />
+<meta name="description" content=The Relational Model  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   A database is an organized collection of data. In the past, data />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="The Relational Model"/>
+<meta name="twitter:description" content="The Relational Model  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   A database is an organized collection of data. In the past, data">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:image" content="">
+
+<!-- Opengraph tags -->
+<meta property="og:title" content="The Relational Model" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="None" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="The Relational Model  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   A database is an organized collection of data. In the past, data" />
+<meta property="og:site_name" content="Data Science with Python" />
+<meta name="theme-color" content="#ffffff" />
+
+  </head>
+<body>
+
+
+    <span id="top"></span>
+
+    <div class="wrapper">
+
+        <div class="main">
+
+            <div class="page" id=Chapters/05/sql rdbms>
+
+                <div class="page__toc">
+
+                    <div class="inner">
+
+                        
+                        <div class="page__toc-header">
+                            On this page
+                        </div>
+
+
+                        <nav id="bd-toc-nav" class="page__toc-nav">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#relational-database-management-systems">
+   Relational Database Management Systems
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rdbms-vs-pandas">
+   RDBMS vs. pandas
+  </a>
+ </li>
+</ul>
+
+                            <p class="logo">
+                                
+                                    
+                                    <a href="../../intro.html"><img src="../../_static/DC-2.png" class="logo" alt="logo"></a>
+                                    
+                                
+                            </p>
+
+                            <p class="powered">Powered by <a href="https://jupyterbook.org/">Jupyter Book</a></p>
+
+                        </nav>
+
+                        <div class="page__toc-footer">
+                            
+                            
+                            <p><a href="#top"><strong>Back to top</strong></a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page__header">
+
+                    <div class="page__header-copy">
+
+                        <p class="page__header-heading"><a href="../../intro.html">Data Science with Python</a></p>
+
+                        <p class="page__header-subheading">The Relational Model</p>
+
+                    </div>
+
+                    <p class="page__header-authors">Ashray Shetty</p>
+
+                </div> <!-- .page__header -->
+
+
+
+                
+                <main class="page__content" role="main">
+                    
+                    <div>
+                        
+  <div class="section" id="the-relational-model">
+<h1>The Relational Model<a class="headerlink" href="#the-relational-model" title="Permalink to this headline">¶</a></h1>
+<hr style="height:1px;border:none;color:#666;background-color:#666;" />
+<p>A <strong>database</strong> is an organized collection of data. In the past, data was stored in specialized data structures that were designed for specific tasks. For example, airlines might record flight bookings in a different format than a bank managing an account ledger. In 1969, Ted Codd introduced the relational model as a general method of storing data. Data is stored in two-dimensional tables called <strong>relations</strong>, consisting of individual observations in each row (commonly referred to as <strong>tuples</strong>). Each tuple is a structured data item that represents the relationship between certain <strong>attributes</strong> (columns). Each attribute of a relation has a name and data type.</p>
+<p>Consider the <code class="docutils literal notranslate"><span class="pre">purchases</span></code> relation below:</p>
+<header style="text-align:center"><strong>purchases</strong></header>
+<table border="1" class="DataFrame">
+    <thead>
+        <tr>
+            <td><b>name</b></td>
+            <td><b>product</b></td>
+            <td><b>retailer</b></td>
+            <td><b>date purchased</b></td>
+        </tr>
+    </thead>
+    <tr>
+        <td>Samantha</td>
+        <td>iPod</td>
+        <td>Best Buy</td>
+        <td>June 3, 2016</td>
+    </tr>
+    <tr>
+        <td>Timothy</td>
+        <td>Chromebook</td>
+        <td>Amazon</td>
+        <td>July 8, 2016</td>
+    </tr>
+    <tr>
+        <td>Jason</td>
+        <td>Surface Pro</td>
+        <td>Target</td>
+        <td>October 2, 2016</td>
+    </tr>
+</table><p>In <code class="docutils literal notranslate"><span class="pre">purchases</span></code>, each tuple represents the relationship between the <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">product</span></code>, <code class="docutils literal notranslate"><span class="pre">retailer</span></code>, and <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">purchased</span></code> attributes.</p>
+<p>A relation’s <em>schema</em> contains its column names, data types, and constraints. For example, the schema of the <code class="docutils literal notranslate"><span class="pre">purchases</span></code> table states that the columns are <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">product</span></code>, <code class="docutils literal notranslate"><span class="pre">retailer</span></code>, and <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">purchased</span></code>; it also states that each column contains text.</p>
+<p>The following <code class="docutils literal notranslate"><span class="pre">prices</span></code> relation shows the price of certain gadgets at a few retail stores:</p>
+<header style="text-align:center"><strong>prices</strong></header>
+<table border="1" class="DataFrame">
+    <thead>
+        <tr>
+            <td><b>retailer</b></td>
+            <td><b>product</b></td>
+            <td><b>price</b></td>
+        </tr>
+    </thead>
+    <tr>
+        <td>Best Buy</td>
+        <td>Galaxy S9</td>
+        <td>719.00</td>
+    </tr>
+    <tr>
+        <td>Best Buy</td>
+        <td>iPod</td>
+        <td>200.00</td>
+    </tr>
+    <tr>
+        <td>Amazon</td>
+        <td>iPad</td>
+        <td>450.00</td>
+    </tr>
+    <tr>
+        <td>Amazon</td>
+        <td>Battery pack</td>
+        <td>24.87</td>
+    </tr>
+    <tr>
+        <td>Amazon</td>
+        <td>Chromebook</td>
+        <td>249.99</td>
+    </tr>
+    <tr>
+        <td>Target</td>
+        <td>iPod</td>
+        <td>215.00</td>
+    </tr>
+    <tr>
+        <td>Target</td>
+        <td>Surface Pro</td>
+        <td>799.00</td>
+    </tr>
+    <tr>
+        <td>Target</td>
+        <td>Google Pixel 2</td>
+        <td>659.00</td>
+    </tr>
+    <tr>
+        <td>Walmart</td>
+        <td>Chromebook</td>
+        <td>238.79</td>
+    </tr>
+</table><p>We can then reference both tables simultaneously to determine how much Samantha, Timothy, and Jason paid for their respective gadgets (assuming prices at each store stay constant over time). Together, the two tables form a <strong>relational database</strong>, which is a collection of one or more relations.
+The schema of the entire database is the set of schemas of the individual relations in the database.</p>
+<div class="section" id="relational-database-management-systems">
+<h2>Relational Database Management Systems<a class="headerlink" href="#relational-database-management-systems" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>A relational database can be simply described as a set of tables containing rows of individual data entries. A relational database management system (RDBMSs) provides an interface to a relational database. <a class="reference external" href="https://www.wikiwand.com/en/Oracle_Database">Oracle</a>, <a class="reference external" href="https://www.wikiwand.com/en/MySQL">MySQL</a>, and <a class="reference external" href="https://www.wikiwand.com/en/PostgreSQL">PostgreSQL</a> are three of the most commonly used RDBMSs used in practice today.</p>
+<p>Relational database management systems give users the ability to add, edit, and remove data from databases. These systems provide several key benefits over using a collection of text files to store data, including:</p>
+<ol class="simple">
+<li><p>Reliable data storage: RDBMSs protect against data corruption from system failures or crashes.</p></li>
+<li><p>Performance: RDBMSs often store data more efficiently than text files and have well-developed algorithms for querying data.</p></li>
+<li><p>Data management: RDBMSs implement access control, preventing unauthorized users from accessing sensitive datasets.</p></li>
+<li><p>Data consistency: RDBMSs can impose constraints on the data entered—for example, that a column <code class="docutils literal notranslate"><span class="pre">GPA</span></code> only contains floats between 0.0 and 4.0.</p></li>
+</ol>
+<p>To work with data stored in a RDBMS, we use the SQL programming language.</p>
+</div>
+<div class="section" id="rdbms-vs-pandas">
+<h2>RDBMS vs. pandas<a class="headerlink" href="#rdbms-vs-pandas" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>How do RDBMSs and the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> Python package differ? First, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> is not concerned about data storage. Although DataFrames can read and write from multiple data formats, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> does not dictate how the data are actually stored on the underlying computer like a RDBMS does. Second, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> primarily provides methods for manipulating data while RDBMSs handle both data storage and data manipulation, making them more suitable for larger datasets. A typical rule of thumb is to use a RDBMS for datasets larger than several gigabytes. Finally, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> requires knowledge of Python in order to use, whereas RDBMSs require knowledge of SQL.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "MultiverseDF/book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Chapters/05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                    </div>
+                    
+                </main> <!-- .page__content -->
+                
+
+
+                <footer class="page__footer">
+
+                    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"></a></p>
+
+                    <p>Creative Commons License &ndash; This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International.</p>
+
+                </footer> <!-- .page__footer -->
+
+            </div> <!-- .page -->
+
+            
+
+            
+            <div class="sidebar bd-sidebar inactive" id="site-navigation">
+
+                <div class="sidebar__header">
+
+
+                    Contents
+
+                </div>
+
+                <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
+                    <ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Python%20editor.html">
+   Python Editor
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Programming using Python
+ </span>
+</p>
+<ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01/Workflow_intro.html">
+   1. Introduction to Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_1.html">
+     Basic Python Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_2.html">
+     Branching Programs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_3.html">
+     Visualizing Branching Programs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
+   2. Sequence, Loops and Methods
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02/String%20Methods.html">
+     String Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02/List%20and%20Tuples.html">
+     List and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02/Loops.html">
+     Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
+   3. Dictionaries and Comprehensions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Exercise%2001.html">
+   📝 Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Solutions%2001.html">
+   📃 Solution for Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
+   4. Functions and Exceptions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03/Exceptions.html">
+     Exceptions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data Wrangling using Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/NumPy.html">
+   5. Introduction to Numpy
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04/Pandas%20Intro.html">
+   6. DataFrames in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Introduction%20to%20Pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
+     Grouping and Pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
+     Applying Functions and Plotting in Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
+     Working with Multiple DataFrames
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children active">
+  <a class="reference internal" href="sql%20intro.html">
+   7. Relational Databases and SQL
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active active">
+    <a class="current reference internal" href="#">
+     The Relational Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql%20basics.html">
+     SQL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sql%20joins.html">
+     SQL Joins
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../06/viz%20intro.html">
+   8. Data Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20quantitative.html">
+     Visualizing Quantitative Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20qualitative.html">
+     Visualizing Qualitative Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20matplotlib.html">
+     Customizing Plots using matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                </nav>
+
+                <div class="sidebar__footer">
+
+                </div>
+
+            </div> <!-- .sidebar -->
+            
+        </div> <!-- .main -->
+
+        <div class="toolbar">
+
+            <div class="toolbar__inner">
+
+                <ul class="toolbar__main">
+                    <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
+                    <li data-tippy-content="Home"><a href="../../intro.html"><i data-feather="home"></i></a></li>
+                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                    <!-- <li class="btn__search">
+                        <form action="../../search.html" method="get">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off">
+                            <i data-feather="search"></i>
+                        </form>
+                    </li> -->
+                </ul>
+
+                <ul class="toolbar__links">
+                    <li data-tippy-content="Fullscreen" class="btn__fullscreen"><i data-feather="maximize"></i></li>
+                    <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
+                    <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
+                    <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                        <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/MultiverseDF/book/tree/main/Chapters/05/sql rdbms.ipynb" download><i data-feather="github"></i></a></li>
+                </ul>
+
+            </div>
+
+        </div> <!-- .toolbar -->
+        <div id="downloadPDFModal" style="display: none;">
+            <ul class="pdf-options" style="display: block;">
+                <li class="download-pdf-book" onClick="window.print()">
+                    <p>Lecture (PDF)</p>
+                </li>
+                <li class="download-pdf-file">
+                    <a href="" download><p>Book (PDF)</p></a>
+                </li>
+            </ul>
+        </div>
+        <div id="settingsModal" style="display: none;">
+            <p class="modal-title"> Notebook Launcher </p>
+            <div class="modal-desc">
+            <p>
+                Choose public or private cloud service for "Launch" button.
+            </p>
+            </div>
+            <p class="modal-subtitle">Select a server</p>
+            <ul class="modal-servers">
+            <li class="active launcher-public">
+                <span class="label">Public</span>
+                <select id="launcher-public-input">
+                
+                </select>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="launcher-private">
+                <span class="label">Private</span>
+                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            </ul>
+            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <script>
+                // QuantEcon Notebook Launcher
+                const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
+                // Highlight the server type if previous selection exists
+                if (typeof localStorage.launcherType !== 'undefined') {
+                  for (var i = 0; i < launcherTypeElements.length; i++) {
+                    launcherTypeElements[i].classList.remove('active');
+                    if ( launcherTypeElements[i].classList.contains(localStorage.launcherType) ) {
+                      launcherTypeElements[i].classList.add('active');
+                    }
+                  }
+                }
+                // Highlight server type on click and set local storage value
+                for (var i = 0; i < launcherTypeElements.length; i++) {
+                  launcherTypeElements[i].addEventListener('click', function() {
+                    for (var j = 0; j < launcherTypeElements.length; j++) {
+                      launcherTypeElements[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    if ( this.classList.contains('launcher-private') ) {
+                      localStorage.launcherType = 'launcher-private';
+                    } else if ( this.classList.contains('launcher-public') ) {
+                      localStorage.launcherType = 'launcher-public';
+                    }
+                    setLaunchServer();
+                  })
+                }
+                const launcherPublic = document.getElementById('launcher-public-input');
+                const launcherPrivate = document.getElementById('launcher-private-input');
+                const pageName = "Chapters/05/sql rdbms";
+                const repoURL = "";
+                const urlPath = "";
+                const branch = ""
+                const launchNotebookLink = document.getElementById('advancedLaunchButton');
+
+                // Highlight public server option if previous selection exists
+                if (typeof localStorage.launcherPublic !== 'undefined') {
+                  launcherPublic.value = localStorage.launcherPublic;
+                }
+                // Update local storage upon public server selection
+                launcherPublic.addEventListener('change', (event) => {
+                  setLaunchServer();
+                });
+                // Populate private server input if previous entry exists
+                if (typeof localStorage.launcherPrivate !== 'undefined') {
+                  launcherPrivate.value = localStorage.launcherPrivate;
+                }
+                // Update local storage when a private server is entered
+                launcherPrivate.addEventListener('input', (event) => {
+                  setLaunchServer();
+                });
+
+                // Function to update the "Launch Notebook" link href
+                function setLaunchServer() {
+                  launchNotebookLink.removeAttribute("style")
+                  if ( localStorage.launcherType == 'launcher-private' ) {
+                    let repoPrefix = "/jupyter/hub/user-redirect/git-pull?repo=" + repoURL + "&branch=" + branch + "&urlpath=" + urlPath;
+                    launcherPrivateValue = launcherPrivate.value
+                    if (!launcherPrivateValue) {
+                        launchNotebookLink.removeAttribute("href")
+                        launchNotebookLink.style.background = "grey"
+                        return
+                    }
+                    localStorage.launcherPrivate = launcherPrivateValue;
+                    privateServer = localStorage.launcherPrivate.replace(/\/$/, "")
+                    if (!privateServer.includes("http")) {
+                        privateServer = "http://" + privateServer
+                    }
+                    launchNotebookLinkURL = privateServer + repoPrefix;
+                  } else if ( localStorage.launcherType == 'launcher-public' ) {
+                    launcherPublicValue = launcherPublic.options[launcherPublic.selectedIndex].value;
+                    localStorage.launcherPublic = launcherPublicValue;
+                    launchNotebookLinkURL = localStorage.launcherPublic;
+                  }
+                  if (launchNotebookLinkURL) launchNotebookLink.href = launchNotebookLinkURL;
+                }
+                // Check if user has previously selected a server
+                if ( (typeof localStorage.launcherPrivate !== 'undefined') || (typeof localStorage.launcherPublic !== 'undefined') ) {
+                  setLaunchServer();
+                }
+                </script>
+
+        </div>
+
+    </div> <!-- .wrapper-->
+    
+  </body>
+</html>

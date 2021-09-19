@@ -1,0 +1,1022 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods &#8212; Data Science with Python</title>
+    <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "github-org/github-repo");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/quantecon-book-theme.76bf49d7bbc59738cdb03766fad654af.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/DC-2.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="List and Tuples" href="List%20and%20Tuples.html" />
+    <link rel="prev" title="2. Sequence, Loops and Methods" href="Sequence%2C%20Loops%20and%20Methods.html" />
+
+<!-- Normal Meta Tags -->
+<meta name="author" context="Ashray Shetty" />
+<meta name="keywords" content="" />
+<meta name="description" content=String Methods  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  Python strings are just pieces of text. So far we looked at how to conc />
+
+<!-- Twitter tags -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@" />
+<meta name="twitter:title" content="String Methods"/>
+<meta name="twitter:description" content="String Methods  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  Python strings are just pieces of text. So far we looked at how to conc">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:image" content="">
+
+<!-- Opengraph tags -->
+<meta property="og:title" content="String Methods" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="None" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="String Methods  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  Python strings are just pieces of text. So far we looked at how to conc" />
+<meta property="og:site_name" content="Data Science with Python" />
+<meta name="theme-color" content="#ffffff" />
+
+  </head>
+<body>
+
+
+    <span id="top"></span>
+
+    <div class="wrapper">
+
+        <div class="main">
+
+            <div class="page" id=Chapters/02/String Methods>
+
+                <div class="page__toc">
+
+                    <div class="inner">
+
+                        
+                        <div class="page__toc-header">
+                            On this page
+                        </div>
+
+
+                        <nav id="bd-toc-nav" class="page__toc-nav">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing">
+   Slicing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#indexing">
+     Indexing
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   String Methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-formatting">
+   String formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extra">
+   Extra
+  </a>
+ </li>
+</ul>
+
+                            <p class="logo">
+                                
+                                    
+                                    <a href="../../intro.html"><img src="../../_static/DC-2.png" class="logo" alt="logo"></a>
+                                    
+                                
+                            </p>
+
+                            <p class="powered">Powered by <a href="https://jupyterbook.org/">Jupyter Book</a></p>
+
+                        </nav>
+
+                        <div class="page__toc-footer">
+                            
+                            
+                            <p><a href="#top"><strong>Back to top</strong></a></p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page__header">
+
+                    <div class="page__header-copy">
+
+                        <p class="page__header-heading"><a href="../../intro.html">Data Science with Python</a></p>
+
+                        <p class="page__header-subheading">String Methods</p>
+
+                    </div>
+
+                    <p class="page__header-authors">Ashray Shetty</p>
+
+                </div> <!-- .page__header -->
+
+
+
+                
+                <main class="page__content" role="main">
+                    
+                    <div>
+                        
+  <div class="section" id="string-methods">
+<h1>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
+<hr style="height:1px;border:none;color:#666;background-color:#666;" /><p>Python strings are just pieces of text. So far we looked at how to concatenate (add) them together.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello World!&#39;</span>
+<span class="s1">&#39;My computer says &#39;</span> <span class="o">+</span> <span class="n">greeting</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;My computer says Hello World!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can even repeat the strings several times by using <code class="docutils literal notranslate"><span class="pre">*</span></code> operator</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">*</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello World!Hello World!Hello World!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python strings are <a class="reference external" href="https://docs.python.org/3/glossary.html#term-immutable">immutable</a>.
+That’s just a fancy way to say that
+they cannot be changed in-place, and we need to create a new string to
+change them. Even <code class="docutils literal notranslate"><span class="pre">some_string</span> <span class="pre">+=</span> <span class="pre">another_string</span></code> creates a new string.
+Python will treat that as <code class="docutils literal notranslate"><span class="pre">some_string</span> <span class="pre">=</span> <span class="pre">some_string</span> <span class="pre">+</span> <span class="pre">another_string</span></code>,
+so it creates a new string but it puts it back to the same variable.</p>
+<p><code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> are nice, but what else can we do with strings?</p>
+<div class="section" id="slicing">
+<h2>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h2>
+<p>Slicing is really simple. It just means getting a part of the string.
+For example, to get all characters between the second place between the
+characters and the fifth place between the characters, we can do this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hell&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>So the syntax is like <code class="docutils literal notranslate"><span class="pre">some_string[start:end]</span></code>.</p>
+<p>This picture explains how the slicing works:</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/slicing1.png"><img alt="Slicing with non-negative values." src="../../_images/slicing1.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Slicing strings</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>But what happens if we slice with negative values?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="o">-</span><span class="mi">6</span><span class="p">:</span><span class="o">-</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Wor&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>It turns out we can slice strings using negative values by simply starts counting
+from the end of the string.</p>
+<div class="figure align-default" id="slicing-strings">
+<a class="reference internal image-reference" href="../../_images/slicing2.png"><img alt="Slicing with negative values." src="../../_images/slicing2.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Slicing strings using negative values</span><a class="headerlink" href="#slicing-strings" title="Permalink to this image">¶</a></p>
+</div>
+<p>If we don’t specify the beginning it defaults to 0, and if we don’t
+specify the end it defaults to the length of the string. For example, we
+can get everything except the first or last character like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;ello World!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello World&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>As mentioned cannot be changed in-place, so if we write something like…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hiyaa&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="n">b99a669908bb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">greeting</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Hiyaa&#39;</span>
+
+<span class="ne">TypeError</span>: &#39;str&#39; object does not support item assignment
+</pre></div>
+</div>
+</div>
+</div>
+<p>we get an error message</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing">
+<h3>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<p>So now we know how slicing works. But what happens if we forget the <code class="docutils literal notranslate"><span class="pre">:</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;e&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>That’s interesting. We get a string that is only one character long. But
+the first character of <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">World!</span></code> should be <code class="docutils literal notranslate"><span class="pre">H</span></code>, not <code class="docutils literal notranslate"><span class="pre">e</span></code>, so why did
+we get an e?</p>
+<p>Programming starts at zero. Indexing strings also starts at zero. The
+first character is <code class="docutils literal notranslate"><span class="pre">greeting[0]</span></code>, the second character is
+<code class="docutils literal notranslate"><span class="pre">greeting[1]</span></code>, and so on.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s1">&#39;H&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="s1">&#39;e&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="s1">&#39;l&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<span class="s1">&#39;l&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+<span class="s1">&#39;o&#39;</span>
+</pre></div>
+</div>
+<p>So string indexes work like this:</p>
+<div class="figure align-default" id="indexing-strings">
+<a class="reference internal image-reference" href="../../_images/indexing1.png"><img alt="Indexing Strings." src="../../_images/indexing1.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">String Index</span><a class="headerlink" href="#indexing-strings" title="Permalink to this image">¶</a></p>
+</div>
+<p>How about negative values?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We got the last character.</p>
+<p>But why didn’t that start at zero? <code class="docutils literal notranslate"><span class="pre">our_string[-1]</span></code> is the last
+character, but <code class="docutils literal notranslate"><span class="pre">our_string[1]</span></code> is not the first character!</p>
+<p>That’s because 0 and -0 are equal, so indexing with -0 would do the same
+thing as indexing with 0.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="s1">&#39;H&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="p">[</span><span class="o">-</span><span class="mi">0</span><span class="p">]</span>
+<span class="s1">&#39;H&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>String Methods<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Python’s strings have many useful methods.
+<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">The official documentation</a>
+covers them all, but I’m going to just show some of the most commonly
+used ones briefly. Python also comes with built-in documentation about
+the string methods and we can run <code class="docutils literal notranslate"><span class="pre">help(str)</span></code> to read it. We can also
+get help about one string method at a time, like <code class="docutils literal notranslate"><span class="pre">help(str.upper)</span></code>.</p>
+<p>Again, nothing can modify strings in-place. Most string methods
+return a new string, but things like <code class="docutils literal notranslate"><span class="pre">our_string</span> <span class="pre">=</span> <span class="pre">our_string.upper()</span></code>
+still work because the new string is assigned to the old variable.</p>
+<div class="admonition-also-note-that admonition">
+<p class="admonition-title">Also note that</p>
+<p>All of these methods are used like <code class="docutils literal notranslate"><span class="pre">our_string.stuff()</span></code>,
+not like <code class="docutils literal notranslate"><span class="pre">stuff(our_string)</span></code>. The idea with that is that our string
+knows how to do all these things, like <code class="docutils literal notranslate"><span class="pre">our_string.stuff()</span></code>, we don’t
+need a separate function that does these things like <code class="docutils literal notranslate"><span class="pre">stuff(our_string)</span></code>. We will learn more about methods and functions later.</p>
+</div>
+<p>Here’s an example with some of the most commonly used string methods:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_caps</span> <span class="o">=</span> <span class="s2">&quot;HOW ARE YOU TODAY?&quot;</span>
+<span class="n">all_caps</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;HOW ARE YOU TODAY?&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_lower</span> <span class="o">=</span> <span class="n">all_caps</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">all_lower</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;how are you today?&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the method lower doesn’t change the original string but rather returns a new one. If we check <strong>all_caps</strong> it will still contain the same value</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_caps</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;HOW ARE YOU TODAY?&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are <em>many</em> string methods. Check out the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">documentation</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_caps</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;HOW&#39;, &#39;ARE&#39;, &#39;YOU&#39;, &#39;TODAY?&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_caps</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;O&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can even replace the string with a different character, by using the replace method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># replaces all &#39;o&#39; with &#39;@&#39;</span>
+<span class="n">greeting</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hell@ W@rld!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># replaces just the first &#39;o&#39;</span>
+<span class="n">greeting</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;@&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hell@ World!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can use replace to change more than one character like</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">)</span>
+<span class="s1">&#39;Hello Earth!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string-formatting">
+<h2>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h2>
+<p>To add a string in the middle of another string, we can do something
+like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;Tony&#39;</span>
+<span class="s1">&#39;My name is &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;.&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;My name is Tony.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>But that gets complicated if we have too many strings to add.</p>
+<p>Python has ways of creating strings by “filling in the blanks” and formatting them nicely. This is helpful for when you want to print statements that include variables or statements. There are a few ways of doing this but the recomended one is <a class="reference external" href="https://docs.python.org/3.6/whatsnew/3.6.html#whatsnew36-pep498">f-strings</a>. All you need to do is put the letter “f” out the front of your string and then you can include variables with curly-bracket notation <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bill Gates&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">65</span>
+<span class="n">day</span> <span class="o">=</span> <span class="mi">28</span>
+<span class="n">month</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">year</span> <span class="o">=</span> <span class="mi">1955</span>
+<span class="n">template_new</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;Hello, my name is </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. I am </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2"> years old. I was born </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">month</span><span class="si">:</span><span class="s2">02</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.&quot;</span>
+<span class="n">template_new</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello, my name is Bill Gates. I am 65 years old. I was born 28/10/1955.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extra">
+<h2>Extra<a class="headerlink" href="#extra" title="Permalink to this headline">¶</a></h2>
+<p>We can use <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> to check if a string contains another
+string.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Hello&quot;</span> <span class="ow">in</span> <span class="n">greeting</span>
+<span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Python&quot;</span> <span class="ow">in</span> <span class="n">greeting</span>
+<span class="kc">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;Python&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">greeting</span>
+<span class="kc">True</span>
+</pre></div>
+</div>
+<p>We can get the length of a string with the <code class="docutils literal notranslate"><span class="pre">len</span></code> function. The name
+<code class="docutils literal notranslate"><span class="pre">len</span></code> is short for “length”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>12
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "MultiverseDF/book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Chapters/02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                    </div>
+                    
+                </main> <!-- .page__content -->
+                
+
+
+                <footer class="page__footer">
+
+                    <p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://licensebuttons.net/l/by-sa/4.0/80x15.png"></a></p>
+
+                    <p>Creative Commons License &ndash; This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International.</p>
+
+                </footer> <!-- .page__footer -->
+
+            </div> <!-- .page -->
+
+            
+
+            
+            <div class="sidebar bd-sidebar inactive" id="site-navigation">
+
+                <div class="sidebar__header">
+
+
+                    Contents
+
+                </div>
+
+                <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
+                    <ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Data Science
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Python%20editor.html">
+   Python Editor
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Programming using Python
+ </span>
+</p>
+<ul class="current nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01/Workflow_intro.html">
+   1. Introduction to Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_1.html">
+     Basic Python Data Types
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_2.html">
+     Branching Programs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../01/workflow_3.html">
+     Visualizing Branching Programs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children active">
+  <a class="reference internal" href="Sequence%2C%20Loops%20and%20Methods.html">
+   2. Sequence, Loops and Methods
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active active">
+    <a class="current reference internal" href="#">
+     String Methods
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="List%20and%20Tuples.html">
+     List and Tuples
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Loops.html">
+     Loops
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
+   3. Dictionaries and Comprehensions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Exercise%2001.html">
+   📝 Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Solutions%2001.html">
+   📃 Solution for Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
+   4. Functions and Exceptions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03/Exceptions.html">
+     Exceptions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Data Wrangling using Python
+ </span>
+</p>
+<ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/NumPy.html">
+   5. Introduction to Numpy
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../04/Pandas%20Intro.html">
+   6. DataFrames in Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Introduction%20to%20Pandas.html">
+     Introduction to Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
+     Grouping and Pivoting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
+     Applying Functions and Plotting in Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
+     Working with Multiple DataFrames
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05/sql%20intro.html">
+   7. Relational Databases and SQL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05/sql%20rdbms.html">
+     The Relational Model
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05/sql%20basics.html">
+     SQL
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../05/sql%20joins.html">
+     SQL Joins
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../06/viz%20intro.html">
+   8. Data Visualization
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20quantitative.html">
+     Visualizing Quantitative Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20qualitative.html">
+     Visualizing Qualitative Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../06/viz%20matplotlib.html">
+     Customizing Plots using matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                </nav>
+
+                <div class="sidebar__footer">
+
+                </div>
+
+            </div> <!-- .sidebar -->
+            
+        </div> <!-- .main -->
+
+        <div class="toolbar">
+
+            <div class="toolbar__inner">
+
+                <ul class="toolbar__main">
+                    <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
+                    <li data-tippy-content="Home"><a href="../../intro.html"><i data-feather="home"></i></a></li>
+                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                    <!-- <li class="btn__search">
+                        <form action="../../search.html" method="get">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off">
+                            <i data-feather="search"></i>
+                        </form>
+                    </li> -->
+                </ul>
+
+                <ul class="toolbar__links">
+                    <li data-tippy-content="Fullscreen" class="btn__fullscreen"><i data-feather="maximize"></i></li>
+                    <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
+                    <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
+                    <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                        <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/MultiverseDF/book/tree/main/Chapters/02/String Methods.ipynb" download><i data-feather="github"></i></a></li>
+                </ul>
+
+            </div>
+
+        </div> <!-- .toolbar -->
+        <div id="downloadPDFModal" style="display: none;">
+            <ul class="pdf-options" style="display: block;">
+                <li class="download-pdf-book" onClick="window.print()">
+                    <p>Lecture (PDF)</p>
+                </li>
+                <li class="download-pdf-file">
+                    <a href="" download><p>Book (PDF)</p></a>
+                </li>
+            </ul>
+        </div>
+        <div id="settingsModal" style="display: none;">
+            <p class="modal-title"> Notebook Launcher </p>
+            <div class="modal-desc">
+            <p>
+                Choose public or private cloud service for "Launch" button.
+            </p>
+            </div>
+            <p class="modal-subtitle">Select a server</p>
+            <ul class="modal-servers">
+            <li class="active launcher-public">
+                <span class="label">Public</span>
+                <select id="launcher-public-input">
+                
+                </select>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="launcher-private">
+                <span class="label">Private</span>
+                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            </ul>
+            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <script>
+                // QuantEcon Notebook Launcher
+                const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
+                // Highlight the server type if previous selection exists
+                if (typeof localStorage.launcherType !== 'undefined') {
+                  for (var i = 0; i < launcherTypeElements.length; i++) {
+                    launcherTypeElements[i].classList.remove('active');
+                    if ( launcherTypeElements[i].classList.contains(localStorage.launcherType) ) {
+                      launcherTypeElements[i].classList.add('active');
+                    }
+                  }
+                }
+                // Highlight server type on click and set local storage value
+                for (var i = 0; i < launcherTypeElements.length; i++) {
+                  launcherTypeElements[i].addEventListener('click', function() {
+                    for (var j = 0; j < launcherTypeElements.length; j++) {
+                      launcherTypeElements[j].classList.remove('active');
+                    }
+                    this.classList.add('active');
+                    if ( this.classList.contains('launcher-private') ) {
+                      localStorage.launcherType = 'launcher-private';
+                    } else if ( this.classList.contains('launcher-public') ) {
+                      localStorage.launcherType = 'launcher-public';
+                    }
+                    setLaunchServer();
+                  })
+                }
+                const launcherPublic = document.getElementById('launcher-public-input');
+                const launcherPrivate = document.getElementById('launcher-private-input');
+                const pageName = "Chapters/02/String Methods";
+                const repoURL = "";
+                const urlPath = "";
+                const branch = ""
+                const launchNotebookLink = document.getElementById('advancedLaunchButton');
+
+                // Highlight public server option if previous selection exists
+                if (typeof localStorage.launcherPublic !== 'undefined') {
+                  launcherPublic.value = localStorage.launcherPublic;
+                }
+                // Update local storage upon public server selection
+                launcherPublic.addEventListener('change', (event) => {
+                  setLaunchServer();
+                });
+                // Populate private server input if previous entry exists
+                if (typeof localStorage.launcherPrivate !== 'undefined') {
+                  launcherPrivate.value = localStorage.launcherPrivate;
+                }
+                // Update local storage when a private server is entered
+                launcherPrivate.addEventListener('input', (event) => {
+                  setLaunchServer();
+                });
+
+                // Function to update the "Launch Notebook" link href
+                function setLaunchServer() {
+                  launchNotebookLink.removeAttribute("style")
+                  if ( localStorage.launcherType == 'launcher-private' ) {
+                    let repoPrefix = "/jupyter/hub/user-redirect/git-pull?repo=" + repoURL + "&branch=" + branch + "&urlpath=" + urlPath;
+                    launcherPrivateValue = launcherPrivate.value
+                    if (!launcherPrivateValue) {
+                        launchNotebookLink.removeAttribute("href")
+                        launchNotebookLink.style.background = "grey"
+                        return
+                    }
+                    localStorage.launcherPrivate = launcherPrivateValue;
+                    privateServer = localStorage.launcherPrivate.replace(/\/$/, "")
+                    if (!privateServer.includes("http")) {
+                        privateServer = "http://" + privateServer
+                    }
+                    launchNotebookLinkURL = privateServer + repoPrefix;
+                  } else if ( localStorage.launcherType == 'launcher-public' ) {
+                    launcherPublicValue = launcherPublic.options[launcherPublic.selectedIndex].value;
+                    localStorage.launcherPublic = launcherPublicValue;
+                    launchNotebookLinkURL = localStorage.launcherPublic;
+                  }
+                  if (launchNotebookLinkURL) launchNotebookLink.href = launchNotebookLinkURL;
+                }
+                // Check if user has previously selected a server
+                if ( (typeof localStorage.launcherPrivate !== 'undefined') || (typeof localStorage.launcherPublic !== 'undefined') ) {
+                  setLaunchServer();
+                }
+                </script>
+
+        </div>
+
+    </div> <!-- .wrapper-->
+    
+  </body>
+</html>
