@@ -1,4 +1,18 @@
+body {
+background-image: url(https://jareddillard.com/assets/images/svg/topography.svg);
+}
+
+.toolbar_inner{
+height: 70px;
+}
+
+btn_contrast{
+Display: none;
+}
+
 .toolbar{
-background-color: #002b36;
+background-color: #ffffff;
+box-shadow: 4px 4px 8px 0 rgb(0 0 0 / 5%);
+
 }
 
