@@ -1,20 +1,4 @@
-p {
-  text-align: justify;
-}
-
-h1 {
-  margin-top: 0.1em;
-}
-
-hr {
-  margin-bottom: 1.6em;
-}
-
-.caption {
-  text-align: center;
-}
-
-.caption.collapsible-parent {
-  text-align: left;
+.toolbar{
+background-color: #002b36;
 }
 
