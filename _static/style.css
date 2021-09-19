@@ -6,8 +6,8 @@ background-image: url(https://jareddillard.com/assets/images/svg/topography.svg)
 height: 70px;
 }
 
-btn_contrast{
-Display: none;
+li.btn_contrast{
+display: none;
 }
 
 .toolbar{
