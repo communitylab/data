@@ -22,7 +22,7 @@ greeting[:5] = 'Hiyaa'
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2671/2576220179.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2618/2576220179.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mgreeting[0m[0;34m[[0m[0;34m:[0m[0;36m5[0m[0;34m][0m [0;34m=[0m [0;34m'Hiyaa'[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mTypeError[0m: 'str' object does not support item assignment
