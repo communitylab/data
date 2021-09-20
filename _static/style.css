@@ -10,7 +10,7 @@ li.btn__contrast{
 display: none;
 }
 
-div.powered{
+p.powered{
 display: none;
 }
 
@@ -29,3 +29,15 @@ padding: 1rem;
 #site-navigation{
 background-color: #f7f7f7;
 }
+
+.page__header{
+margin: 0 0 2rem 0;
+border-bottom: 3px solid rgb(77 84 244 /70%)
+}
+
+.page__footer{
+border-bottom: 3px solid rgb(77 84 244 /70%)
+}
+
+
+
