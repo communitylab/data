@@ -12,15 +12,11 @@ parts:
   chapters:
     - file: Chapters/01/intro_python
     - file: Chapters/02/Sequence, Loops and Methods
-      sections:
-        - file: Chapters/02/String Methods
-        - file: Chapters/02/List and Tuples
     - file: Chapters/03/Dictionaries and Comprehensions
     - file: Chapters/02/Exercise 01
     - file: Chapters/02/Solutions 01
     - file: Chapters/03/Functions and Exceptions
-      sections:
-        - file: Chapters/03/Exceptions
+
 - caption: Data Wrangling using Python
   numbered: false
   chapters:
