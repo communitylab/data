@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basic Python Data Types &#8212; Data Science with Python</title>
+    <title>1. Introduction to Python &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -27,13 +27,14 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -45,84 +46,48 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "github-org/github-repo");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="../../_static/quantecon-book-theme.76bf49d7bbc59738cdb03766fad654af.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/DC-2.png"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Branching Programs" href="workflow_2.html" />
-    <link rel="prev" title="1. Introduction to Python" href="Workflow_intro.html" />
+    <link rel="next" title="2. 2. Sequence, Loops and Methods" href="../02/Sequence%2C%20Loops%20and%20Methods.html" />
+    <link rel="prev" title="Data Science with Python" href="../../intro.html" />
 
 <!-- Normal Meta Tags -->
-<meta name="author" context="Ashray Shetty" />
+<meta name="author" context="" />
 <meta name="keywords" content="" />
-<meta name="description" content=Basic Python Data Types  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  One of the most basic feature of Python is that it is a Object />
+<meta name="description" content=Introduction to Python  Contents  Introduction to Python  Basic Python Data Types  Branching Programs  Visualizing Branching Programs  In this section we introd />
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="Basic Python Data Types"/>
-<meta name="twitter:description" content="Basic Python Data Types  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  One of the most basic feature of Python is that it is a Object">
+<meta name="twitter:title" content="Introduction to Python"/>
+<meta name="twitter:description" content="Introduction to Python  Contents  Introduction to Python  Basic Python Data Types  Branching Programs  Visualizing Branching Programs  In this section we introd">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
 <!-- Opengraph tags -->
-<meta property="og:title" content="Basic Python Data Types" />
+<meta property="og:title" content="Introduction to Python" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
-<meta property="og:image" content="" />
-<meta property="og:description" content="Basic Python Data Types  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  One of the most basic feature of Python is that it is a Object" />
+<meta property="og:image" content="https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png" />
+<meta property="og:description" content="Introduction to Python  Contents  Introduction to Python  Basic Python Data Types  Branching Programs  Visualizing Branching Programs  In this section we introd" />
 <meta property="og:site_name" content="Data Science with Python" />
 <meta name="theme-color" content="#ffffff" />
 
@@ -136,7 +101,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         <div class="main">
 
-            <div class="page" id=Chapters/01/workflow_1>
+            <div class="page" id=Chapters/01/intro_python>
 
                 <div class="page__toc">
 
@@ -151,23 +116,62 @@ commentsRunWhenDOMLoaded(addUtterances);
                         <nav id="bd-toc-nav" class="page__toc-nav">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#numeric-data-types">
-   Numeric data types
+  <a class="reference internal nav-link" href="#contents">
+   1.1. Contents
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arithmetic-operators">
-   Arithmetic Operators
+  <a class="reference internal nav-link" href="#basic-python-data-types">
+   1.2. Basic Python Data Types
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numeric-data-types">
+     1.2.1. Numeric data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arithmetic-operators">
+     1.2.2. Arithmetic Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings">
+     1.2.3. Strings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#none">
+     1.2.4. None
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#strings">
-   Strings
+  <a class="reference internal nav-link" href="#branching-programs">
+   1.3. Branching Programs
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean">
+     1.3.1. Boolean
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-operators">
+     1.3.2. Comparison Operators
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nested-conditionals">
+     1.3.3. Nested Conditionals
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#none">
-   None
+  <a class="reference internal nav-link" href="#visualizing-branching-programs">
+   1.4. Visualizing Branching Programs
   </a>
  </li>
 </ul>
@@ -175,7 +179,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                             <p class="logo">
                                 
                                     
-                                    <a href="../../intro.html"><img src="../../_static/DC-2.png" class="logo" alt="logo"></a>
+                                    <a href=https://community.multiverse.io/><img src="../../_static/mvlogo.png" class="logo" alt="logo"></a>
                                     
                                 
                             </p>
@@ -200,11 +204,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 
                         <p class="page__header-heading"><a href="../../intro.html">Data Science with Python</a></p>
 
-                        <p class="page__header-subheading">Basic Python Data Types</p>
+                        <p class="page__header-subheading">Introduction to Python</p>
 
                     </div>
 
-                    <p class="page__header-authors">Ashray Shetty</p>
+                    <p class="page__header-authors"></p>
 
                 </div> <!-- .page__header -->
 
@@ -215,9 +219,36 @@ commentsRunWhenDOMLoaded(addUtterances);
                     
                     <div>
                         
-  <div class="section" id="basic-python-data-types">
-<h1>Basic Python Data Types<a class="headerlink" href="#basic-python-data-types" title="Permalink to this headline">¶</a></h1>
-<hr style="height:1px;border:none;color:#666;background-color:#666;" /><p>One of the most basic feature of Python is that it is a <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming"><strong>Object-oriented programming language</strong></a>, which means everything inside Python is an <strong>object</strong>. When we write programs, we essentially specify a set of actions to perform that manipuates the <strong>object</strong> in some capacity. Sometimes we even call the object as <code class="docutils literal notranslate"><span class="pre">value</span></code>, and each value is a piece of data that a computer program works with such as a number or text. There are different <strong>types</strong> of values: 42 is an integer and “Hello!” is a string.</p>
+  <div class="section" id="introduction-to-python">
+<h1><span class="section-number">1. </span>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2><span class="section-number">1.1. </span>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#Introduction-to-Python">Introduction to Python</a></p>
+<ul>
+<li><p><a class="reference external" href="#Basic-Python-Data-Types">Basic Python Data Types</a></p></li>
+<li><p><a class="reference external" href="#Branching-Programs">Branching Programs</a></p></li>
+<li><p><a class="reference external" href="#Visualizing-Branching-Programs">Visualizing Branching Programs</a></p></li>
+</ul>
+</li>
+</ul>
+<p>In this section we introduce Python programming and present examples illustrating key language features. We can learn the syntax of <code class="docutils literal notranslate"><span class="pre">Python</span></code> in a few days, but learning to use a language is more than just learning the syntax. Building a pool of experience that lets us be an efficient programmer is usually tough – as it requires working on good quality exercises for months, but it is doable and certainly very useful.</p>
+<p>We assume no prior knowledge of Python, but experience with programming concepts or another programming language will help, but is not required to understand the material. Alhough each programming language is different (though not as different as their designers would like us to believe), they can be related along some dimensions.</p>
+<ul class="simple">
+<li><p><strong>Low-level versus high-level</strong> refers to whether we program using instructions and data objects at the level of the machine (something like move 64 bits of data from this location to another location) or whether we program using more abstract high level operations (like pop a menu on the screen) that have been provided by the language designer.</p></li>
+<li><p><strong>General versus targeted to an application domain</strong> refers to whether the primitive operations of the programming language are widely applicable or are fine-tuned to a specific domain or machine. For example, <code class="docutils literal notranslate"><span class="pre">SQL</span></code> is designed for extracting information from relational databases, but you would’nt want to use it to build an operating system. SQL would be useless for that!!!</p></li>
+<li><p><strong>Interpreted versus compiled</strong> refers to whether the sequence of instructions written by the programmer, called <strong>source code</strong>, is executed directly by a program called the <code class="docutils literal notranslate"><span class="pre">interpreter</span></code> that reads the code line by line and performs the specified action with code within the interpreter or whether it is first converted (by a <code class="docutils literal notranslate"><span class="pre">compiler</span></code>) into a sequence of machine-level primitive operations. There are adantages to both approaches. It is often easier to debug programs written in languages that are desgined to be interpreted, because then the interpreter can produce error messages that are easy to relate to the source code.</p></li>
+</ul>
+<p>Python is a <strong>general purpose, interpreted, high-level programming language</strong> that we can use effectively to build almost any kind of program that does not need direct access to the computer’s hardware.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In this website, we use Python, however, this book is not meant to be about Python. It will certainly help us learn Python, and that’s a good thing. But what we would like to focus on is how to write programs that solve problems. Once we figure that out then we can transfer our skill to any programming language.</p>
+</div>
+<p>Programming can dramatically improve our ability to collect and analyze information about the world, which in turn can lead to discoveries. In data science, the purpose of writing a program is to instruct a computer to carry out the steps of an analysis. Computers cannot study the world on their own, people must describe precisely what steps the computer should take in order to collect and analyze data, and those steps are expressed through programs.</p>
+</div>
+<div class="section" id="basic-python-data-types">
+<h2><span class="section-number">1.2. </span>Basic Python Data Types<a class="headerlink" href="#basic-python-data-types" title="Permalink to this headline">¶</a></h2>
+<p>One of the most basic feature of Python is that it is a <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming"><strong>Object-oriented programming language</strong></a>, which means everything inside Python is an <strong>object</strong>. When we write programs, we essentially specify a set of actions to perform that manipuates the <strong>object</strong> in some capacity. Sometimes we even call the object as <code class="docutils literal notranslate"><span class="pre">value</span></code>, and each value is a piece of data that a computer program works with such as a number or text. There are different <strong>types</strong> of values: 42 is an integer and “Hello!” is a string.</p>
 <p>A <strong>variable</strong> is a just name that refers to a value, it gives us a way to associate names with objects. In mathematics and statistics, we usually use variable names like <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span>. In Python, we can use any word as a variable name as long as it starts with a letter or an underscore. However, it should not be a <a class="reference external" href="https://docs.python.org/3.3/reference/lexical_analysis.html#keywords">reserved word</a> in Python such as <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code>, <code class="docutils literal notranslate"><span class="pre">class</span></code>, <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, etc. as these words encode special functionality in Python that we don’t want to overwrite!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -226,7 +257,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>It can be helpful to think of a variable as a box that holds some information (a single number, a vector, a string, etc). We use the <strong>assignment operator</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> to assign a value to a variable. An <a class="reference external" href="https://en.wikipedia.org/wiki/Assignment_(computer_science)">assignment statement</a> associates the name to the left of the = symbol with the object denoted by the expression to the right of the = symbol.</p>
 <div class="figure align-default" id="variables">
 <a class="reference internal image-reference" href="../../_images/box.png"><img alt="Python Variables." src="../../_images/box.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Python Variables.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Python Variables.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
 </div>
 <p>Image taken from: <a class="reference external" href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fmedium.com%2F%40stevenpcurtis.sc%2Fwhat-is-a-variable-3447ac1331b9&amp;psig=AOvVaw3YbYfgb7XFOJ_sHP5eliob&amp;ust=1595365663851000&amp;source=images&amp;cd=vfe&amp;ved=0CA0QjhxqFwoTCMi8nrfe3OoCFQAAAAAdAAAAABAZ">medium.com</a></p>
 <div class="dropdown admonition">
@@ -297,7 +328,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <strong>This table shows some of the built-in data types in Python along with examples of using them.</strong></p>
 </div>
 <div class="section" id="numeric-data-types">
-<h2>Numeric data types<a class="headerlink" href="#numeric-data-types" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">1.2.1. </span>Numeric data types<a class="headerlink" href="#numeric-data-types" title="Permalink to this headline">¶</a></h3>
 <p>There are three distinct numeric types: <strong>integers, floating point numbers</strong>, and <strong>complex numbers</strong> (not covered here). We can determine the type of an object by using Python’s in-built function <code class="docutils literal notranslate"><span class="pre">type()</span></code>. We can print the value of the object using another in-built function <code class="docutils literal notranslate"><span class="pre">print()</span></code>. You can find Pythons inbuilt functions <a class="reference external" href="https://docs.python.org/3/library/functions.html">here</a>. A <a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">function</a> is simply a set of code lines which can take some input, do processing on it and return some output. We will learn more about functions later on, but for now…</p>
 <p>Let’s create a variable named x that stores the integer 7, which is the variable’s value:</p>
 <div class="cell docutils container">
@@ -382,7 +413,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>The code first <code class="docutils literal notranslate"><span class="pre">binds</span></code> the names <strong>pi</strong> and <strong>radius</strong> to different objects of type int. It then binds the name <strong>area</strong> to a third object of type int. This is depicted on the left side of figure below.</p>
 <div class="figure align-default" id="variable-assignment">
 <a class="reference internal image-reference" href="../../_images/binding.png"><img alt="Variable Assignment." src="../../_images/binding.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Variable Assignment.</span><a class="headerlink" href="#variable-assignment" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Variable Assignment.</span><a class="headerlink" href="#variable-assignment" title="Permalink to this image">¶</a></p>
 </div>
 <p>If the program then executes <strong>radius = 14</strong>, the name radius is rebound to a different object of type int as shown on the right side.</p>
 <div class="admonition note">
@@ -391,7 +422,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="arithmetic-operators">
-<h2>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">1.2.2. </span>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h3>
 <p>The code above showed example of arithmetic operator, below is a table of the syntax for common arithmetic operations in Python:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -539,10 +570,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<p>Watch the following video to learn more about Casting</p>
-</div>
 <div class="dropdown admonition">
 <p class="admonition-title"><strong>Casting in Python</strong></p>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/ALvbltAPOcI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -575,7 +602,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="strings">
-<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">1.2.3. </span>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h3>
 <p>Much of data is not stored in the form of numbers, but as text, which is represented in a computer in the form of a string. We can think of string as a sequence of characters, that can represent a word, a sentence, or even the contents of every book in a library.</p>
 <p>We write strings as characters enclosed with either:</p>
 <ul class="simple">
@@ -675,7 +702,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="none">
-<h2>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">1.2.4. </span>None<a class="headerlink" href="#none" title="Permalink to this headline">¶</a></h3>
 <p>There are special object in Python that has no value, we call this type as <code class="docutils literal notranslate"><span class="pre">NoneType</span></code>. This type has only one possible value - <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -710,12 +737,314 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
+<div class="section" id="branching-programs">
+<h2><span class="section-number">1.3. </span>Branching Programs<a class="headerlink" href="#branching-programs" title="Permalink to this headline">¶</a></h2>
+<p>The kinds of computations we have been looking at so far are called <code class="docutils literal notranslate"><span class="pre">straight-line</span> <span class="pre">programs</span></code>. This means they execute code one statement at a time, one after another, in the order in which they appear and stop when they run out of statements to execute. We can’t really describe anything interesting with straight-line programs, as they can be downright boring.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Branching</span></code> programs are more interesting, the simplest branchihng programs is a <code class="docutils literal notranslate"><span class="pre">conditional</span></code>. It has three parts:</p>
+<ul class="simple">
+<li><p>A <code class="docutils literal notranslate"><span class="pre">test</span></code> is performed to check if a statement is evaluated as either True or False</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> the test evaluates as True then a block of code is executed</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code>, an optional block of code gets executed if the test is False</p></li>
+</ul>
+<p>After a conditional statement is executed, execution resumes at the code followiing the statement</p>
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/ifelse.png"><img alt="Control Flow." src="../../_images/ifelse.png" style="height: 300px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Branching Program Flowchart.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="boolean">
+<h3><span class="section-number">1.3.1. </span>Boolean<a class="headerlink" href="#boolean" title="Permalink to this headline">¶</a></h3>
+<p>In Python, we perform test using an objedct called the <code class="docutils literal notranslate"><span class="pre">Boolean</span></code>, which has the type <strong>bool</strong> and has only two values: <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Truth</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Truth</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">Truth</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lies</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">lies</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>In Python, branching program can take the following form</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> Boolean expression:
+    block of code
+<span class="k">else</span>:
+    block of code
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> Boolean expression:
+    block of code
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparison-operators">
+<h3><span class="section-number">1.3.2. </span>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">¶</a></h3>
+<p>Boolean expressions are created in Python with the help of <code class="docutils literal notranslate"><span class="pre">comparison</span> <span class="pre">operators</span></code>. Python includes a variety of operators that compare values. For example, we can check if 3 is larger than 1 + 1 using the comparison operator <code class="docutils literal notranslate"><span class="pre">'&gt;'</span></code> and it will return a boolean value. There are other comparison operators in Python</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Operator</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span> </code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> not equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> greater than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> less than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> the same object as <code class="docutils literal notranslate"><span class="pre">y</span></code>?</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Machine learning&quot;</span> <span class="o">==</span> <span class="s2">&quot;Solve all the world&#39;s problems&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>An expression can contain multiple comparison and they all must hold in order for the whole expression to be True. For example, we can express that 1+1 is between 1 and 3 using the following expression.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Strings can also be compared, and their order is <code class="docutils literal notranslate"><span class="pre">alphabetical</span></code>. A shorter string is less than a longer string that begins with the shorter string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Dog&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;Catastrophe&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;Cat&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s use comparison operators to create the following program that prints <code class="docutils literal notranslate"><span class="pre">&quot;Even&quot;</span></code> if the value of the variable <span class="math notranslate nohighlight">\(x\)</span> is even and <code class="docutils literal notranslate"><span class="pre">&quot;Odd&quot;</span></code> otherwise:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Even&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Odd&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done with conditional&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The expression x%2 == 0 will evaluate to True when the remainder of <span class="math notranslate nohighlight">\(x\)</span> divided by 2 is 0, and False otherwise. Remember than == is used for comparison, since = is reserved for assignment.</p>
+<p>The main points to notice:</p>
+<ul class="simple">
+<li><p>Use keywords <code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+<li><p>The colon <code class="docutils literal notranslate"><span class="pre">:</span></code> ends each conditional expression</p></li>
+<li><p>Indentation (by 4 empty space) defines code blocks</p></li>
+<li><p>In an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, the first block whose conditional statement returns <code class="docutils literal notranslate"><span class="pre">True</span></code> is executed and the program exits the <code class="docutils literal notranslate"><span class="pre">if</span></code> block</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">if</span></code> statements don’t necessarily need <code class="docutils literal notranslate"><span class="pre">elif</span></code> or <code class="docutils literal notranslate"><span class="pre">else</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">elif</span></code> lets us check several conditions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">else</span></code> lets us evaluate a default block if all other conditions are <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>the end of the entire <code class="docutils literal notranslate"><span class="pre">if</span></code> statement is where the indentation returns to the same level as the first <code class="docutils literal notranslate"><span class="pre">if</span></code> keyword</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">Indentation</span></code> is semantically meaningful in Python. For example, if the last statement in the above code were indented, it would be part of the block of code associated with the else, rather than the block of code following the conditional assignment.</p>
+<p>Python is unusual in using indentation this way. Most other programmig languages use bracketing symbols to delineate blocks of code, see comparison below,</p>
+<div class="tab-set docutils">
+<input checked="True" class="tab-input" id="tab-set--0-input--1" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--1">Python</label><div class="tab-content docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">20</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;20 is greater than 18&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<input class="tab-input" id="tab-set--0-input--2" name="tab-set--0" type="radio"><label class="tab-label" for="tab-set--0-input--2">C++</label><div class="tab-content docutils">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;20 is greater than 18&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>An advantage of Python approach is that it ensures that the visual structure of a program is an accurate representation of its semantic structure.</p>
+</div>
+<div class="section" id="nested-conditionals">
+<h3><span class="section-number">1.3.3. </span>Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes our conditional statement may have another conditional, and they are called <code class="docutils literal notranslate"><span class="pre">nested</span></code> conditional. The code below contains nested conditionals in both branches of the top-level if statement.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">20</span>
+
+<span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="k">2</span> == 0:
+    <span class="k">if</span> <span class="n">x</span><span class="o">%</span><span class="k">3</span> == 0:
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Divisible by 2 and 3&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Divisible by 2 and not by 3&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span><span class="o">%</span><span class="k">3</span> == 0:
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Divisible by 3 and not by 2&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Divisible by 2 and not by 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is often convenient to use a <code class="docutils literal notranslate"><span class="pre">compound</span> <span class="pre">Boolean</span> <span class="pre">expression</span></code> in the test of a conditional. In order to create compound Boolean expression we use so called <strong>“Boolean operators”</strong> <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, <code class="docutils literal notranslate"><span class="pre">not</span></code>. Their use case are shown below, and they evaluate to either True or False.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Operator</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">and</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>are <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> both True?</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">or</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:left"><p>is at least one of <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> True?</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">x</span></code></p></td>
+<td class="text-align:left"><p>is <code class="docutils literal notranslate"><span class="pre">x</span></code> False?</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s look at an example of how they can be used to compare three numbers…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">23</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is least&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y is least&#39;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z is least&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x is least
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-try-yourself admonition">
+<p class="admonition-title">Try yourself</p>
+<p>Write a program that examines three variables - <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, and <span class="math notranslate nohighlight">\(z\)</span> - and prints the largest even number among them. If none of them are even, it should print the smallest value of the three.</p>
+</div>
+<p>Python also supports <code class="docutils literal notranslate"><span class="pre">conditional</span> <span class="pre">expressions</span></code> as well as conditional statements. They take the form</p>
+<blockquote>
+<div><p>express1 if condition else express2</p>
+</div></blockquote>
+<p>If the condition evaluates to True, the value of the entire expression is express1; otherwise it is express2. For example, the statement</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">y</span> <span class="k">if</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="n">z</span> <span class="k">else</span> <span class="n">z</span>
+</pre></div>
+</div>
+<p>sets <span class="math notranslate nohighlight">\(x\)</span> to the maximum of <span class="math notranslate nohighlight">\(y\)</span> and <span class="math notranslate nohighlight">\(z\)</span>.</p>
+</div>
+</div>
+<div class="section" id="visualizing-branching-programs">
+<h2><span class="section-number">1.4. </span>Visualizing Branching Programs<a class="headerlink" href="#visualizing-branching-programs" title="Permalink to this headline">¶</a></h2>
+<p>In the preceding section we saw how conditional statements (<code class="docutils literal notranslate"><span class="pre">if..elif...else</span> <span class="pre">statements</span></code>) help us control the flow of our code. We can have as many conditional statements as we like, but only the condition that evaluates as True will get executed. We can see how the computer performs the execution of code in the visulization below. You can click on next to see the changes that take place inside the machine’s memory while executing the code.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="100%"
+    height="500"
+    src="https://pythontutor.com/iframe-embed.html#code=x%2C%20y%2C%20z%20%3D%2010%2C%2042%2C%2084%0A%0Ax%20%3D%20y%20if%20y%20%3E%20z%20else%20z%0A%0Aif%20x%25y%20%3D%3D%200%3A%0A%20%20%20%20if%20x%20%3D%3D%20y%3A%0A%20%20%20%20%20%20%20%20print%28%27x%20is%20same%20as%20y%27%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%27x%20is%20divisible%20by%20y%27%29%0Aelse%3A%0A%20%20%20%20print%28%27x%20is%20not%20divisible%20by%20y%27%29%0Aprint%28float%28x%29%29%0Ax%20%3D%20float%28x%29%0Aprint%28%27Done%20with%20code%27%29%0A&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=3&rawInputLstJSON=%5B%5D&curInstr=0&codeDivWidth=350&codeDivHeight=400"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We haven’t spoken about frames in Python, but we will encounter them when we talk about functions, we will use this visualization in future as we encounter more sophisticated programming concepts and objects in later chapters.</p>
+</div>
+<p>We can see that even though there are 12 lines of code the computer performs the execution of code in 8 steps. In the first step it assigns the values to the variables we specified, and then changes the value of <span class="math notranslate nohighlight">\(x\)</span> based on the condition we specified in the second line of code. We can see how the computer jumps straight to the else code block when it encounters that the <code class="docutils literal notranslate"><span class="pre">if</span></code> condition is found to be false. It then prints the output and comes out of the entire <code class="docutils literal notranslate"><span class="pre">if...else</span></code> code block and moves on to line 12.</p>
+<p>Another point to note is that when the code at <code class="docutils literal notranslate"><span class="pre">print(float(x))</span></code> is executed, it changes the value of <span class="math notranslate nohighlight">\(x\)</span> to a floating point number and prints its output, but there is no change in the actual value of variable <span class="math notranslate nohighlight">\(x\)</span> in computer’s memory. The only time the actual value of the variable changes is when we specify them explicity (which we do in code line 13).</p>
+<p>Conditionals allow us to write programs that are more interesting than straight-line programs, but this class of branching programs is still quite limited. There is very little we can do with conditions and numeric data type, in order to construct more complex programs we will look at <code class="docutils literal notranslate"><span class="pre">sequence</span> <span class="pre">type</span></code> objects. They open up the option to construct another important programming language concept, <strong>iteration</strong>.</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "MultiverseDF/book",
+            repo: "communitylab/data",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -760,56 +1089,62 @@ commentsRunWhenDOMLoaded(addUtterances);
                 </div>
 
                 <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
-                    <ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Data Science
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Python%20editor.html">
-   Python Editor
-  </a>
- </li>
-</ul>
-<p class="caption">
+                    <p class="caption">
  <span class="caption-text">
-  Programming using Python
+  Programming with Python
  </span>
 </p>
 <ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1 current active has-children active">
-  <a class="reference internal" href="Workflow_intro.html">
+ <li class="toctree-l1 current active active">
+  <a class="current reference internal" href="#">
    1. Introduction to Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
+   2. 2. Sequence, Loops and Methods
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active active">
-    <a class="current reference internal" href="#">
-     Basic Python Data Types
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02/String%20Methods.html">
+     2.2. String Methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="workflow_2.html">
-     Branching Programs
+    <a class="reference internal" href="../02/List%20and%20Tuples.html">
+     2.3. List and Tuples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="workflow_3.html">
-     Visualizing Branching Programs
+    <a class="reference internal" href="../02/Loops.html">
+     2.4. Loops
     </a>
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
+   3. 3. Dictionaries and Comprehensions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Exercise%2001.html">
+   4. 📝 Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Solutions%2001.html">
+   5. 📃 Solution for Exercise 01
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
-   2. Sequence, Loops and Methods
+  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
+   6. 4. Functions and Exceptions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -818,50 +1153,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02/String%20Methods.html">
-     String Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/List%20and%20Tuples.html">
-     List and Tuples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/Loops.html">
-     Loops
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
-   3. Dictionaries and Comprehensions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Exercise%2001.html">
-   📝 Exercise 01
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Solutions%2001.html">
-   📃 Solution for Exercise 01
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
-   4. Functions and Exceptions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../03/Exceptions.html">
-     Exceptions
+     6.4. Exceptions
     </a>
    </li>
   </ul>
@@ -882,8 +1175,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../04/Pandas%20Intro.html">
    6. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -914,8 +1207,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../05/sql%20intro.html">
    7. Relational Databases and SQL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -941,8 +1234,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../06/viz%20intro.html">
    8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -983,10 +1276,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <ul class="toolbar__main">
                     <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
                     <li data-tippy-content="Home"><a href="../../intro.html"><i data-feather="home"></i></a></li>
-                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                    <li class="btn__qelogo"><a href="https://community.multiverse.io/" title=""><span class="show-for-sr">Multiverse</span></a></li>
                     <!-- <li class="btn__search">
                         <form action="../../search.html" method="get">
-                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off">
                             <i data-feather="search"></i>
                         </form>
                     </li> -->
@@ -997,8 +1290,9 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
                     <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
                     <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                    <li class="settings-button" id="settingsButton"><div data-tippy-content="Launch Notebook"><i data-feather="play-circle"></i></div></li>
                         <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
-                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/MultiverseDF/book/tree/main/Chapters/01/workflow_1.ipynb" download><i data-feather="github"></i></a></li>
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/communitylab/data/tree/main/Chapters/01/intro_python.ipynb" download><i data-feather="github"></i></a></li>
                 </ul>
 
             </div>
@@ -1027,16 +1321,20 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <span class="label">Public</span>
                 <select id="launcher-public-input">
                 
+                    <option value="https://mybinder.org/v2/gh/communitylab/data/main?urlpath=tree/Chapters/01/intro_python.ipynb">BinderHub</option>
+                
+                    <option value="https://colab.research.google.com/github/communitylab/data/blob/main/Chapters/01/intro_python.ipynb">Colab</option>
+                
                 </select>
                 <i class="fas fa-check-circle"></i>
             </li>
             <li class="launcher-private">
                 <span class="label">Private</span>
-                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <input type="text" id="launcher-private-input" data-repourl="https://github.com/communitylab/data" data-urlpath="tree/data/Chapters/01/intro_python.ipynb" data-branch=main>
                 <i class="fas fa-check-circle"></i>
             </li>
             </ul>
-            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <p class="launch"><a href="https://mybinder.org/v2/gh/communitylab/data/main?urlpath=tree/Chapters/01/intro_python.ipynb" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
             <script>
                 // QuantEcon Notebook Launcher
                 const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
@@ -1066,10 +1364,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 }
                 const launcherPublic = document.getElementById('launcher-public-input');
                 const launcherPrivate = document.getElementById('launcher-private-input');
-                const pageName = "Chapters/01/workflow_1";
-                const repoURL = "";
-                const urlPath = "";
-                const branch = ""
+                const pageName = "Chapters/01/intro_python";
+                const repoURL = "https://github.com/communitylab/data";
+                const urlPath = "tree/data/Chapters/01/intro_python.ipynb";
+                const branch = "main"
                 const launchNotebookLink = document.getElementById('advancedLaunchButton');
 
                 // Highlight public server option if previous selection exists

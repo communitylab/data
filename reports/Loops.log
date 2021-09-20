@@ -27,7 +27,7 @@ print("It's raining!")
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2672/1550929551.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2232/1550929551.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      2[0m [0;32mwhile[0m [0;32mnot[0m [0mraining[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      3[0m     [0mprint[0m[0;34m([0m[0;34m"It's not raining."[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m----> 4[0;31m     [0;32mif[0m [0minput[0m[0;34m([0m[0;34m"Is it raining? (y/n) "[0m[0;34m)[0m [0;34m==[0m [0;34m'y'[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m

@@ -27,13 +27,14 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/quantecon-book-theme.857ff391aaabaeb8c161d2309c375fe6.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/style.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
@@ -45,67 +46,29 @@
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/tabs.js"></script>
-    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script kind="utterances">
-
-    var commentsRunWhenDOMLoaded = cb => {
-    if (document.readyState != 'loading') {
-        cb()
-    } else if (document.addEventListener) {
-        document.addEventListener('DOMContentLoaded', cb)
-    } else {
-        document.attachEvent('onreadystatechange', function() {
-        if (document.readyState == 'complete') cb()
-        })
-    }
-}
-
-var addUtterances = () => {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://utteranc.es/client.js";
-    script.async = "async";
-
-    script.setAttribute("repo", "github-org/github-repo");
-    script.setAttribute("issue-term", "pathname");
-    script.setAttribute("theme", "github-light");
-    script.setAttribute("label", "💬 comment");
-    script.setAttribute("crossorigin", "anonymous");
-
-    sections = document.querySelectorAll("div.section");
-    if (sections !== null) {
-        section = sections[sections.length-1];
-        section.appendChild(script);
-    }
-}
-commentsRunWhenDOMLoaded(addUtterances);
-</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="../../_static/quantecon-book-theme.76bf49d7bbc59738cdb03766fad654af.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../_static/DC-2.png"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Branching Programs" href="workflow_2.html" />
-    <link rel="prev" title="1. Introduction to Python" href="Workflow_intro.html" />
 
 <!-- Normal Meta Tags -->
-<meta name="author" context="Ashray Shetty" />
+<meta name="author" context="" />
 <meta name="keywords" content="" />
 <meta name="description" content=Basic Python Data Types  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  One of the most basic feature of Python is that it is a Object />
 
@@ -121,7 +84,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <meta property="og:title" content="Basic Python Data Types" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
-<meta property="og:image" content="" />
+<meta property="og:image" content="https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png" />
 <meta property="og:description" content="Basic Python Data Types  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  One of the most basic feature of Python is that it is a Object" />
 <meta property="og:site_name" content="Data Science with Python" />
 <meta name="theme-color" content="#ffffff" />
@@ -136,7 +99,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
         <div class="main">
 
-            <div class="page" id=Chapters/01/workflow_1>
+            <div class="page" id=Chapters/01/intro_py>
 
                 <div class="page__toc">
 
@@ -175,7 +138,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                             <p class="logo">
                                 
                                     
-                                    <a href="../../intro.html"><img src="../../_static/DC-2.png" class="logo" alt="logo"></a>
+                                    <a href=https://community.multiverse.io/><img src="../../_static/mvlogo.png" class="logo" alt="logo"></a>
                                     
                                 
                             </p>
@@ -204,7 +167,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
                     </div>
 
-                    <p class="page__header-authors">Ashray Shetty</p>
+                    <p class="page__header-authors"></p>
 
                 </div> <!-- .page__header -->
 
@@ -226,7 +189,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>It can be helpful to think of a variable as a box that holds some information (a single number, a vector, a string, etc). We use the <strong>assignment operator</strong> <code class="docutils literal notranslate"><span class="pre">=</span></code> to assign a value to a variable. An <a class="reference external" href="https://en.wikipedia.org/wiki/Assignment_(computer_science)">assignment statement</a> associates the name to the left of the = symbol with the object denoted by the expression to the right of the = symbol.</p>
 <div class="figure align-default" id="variables">
 <a class="reference internal image-reference" href="../../_images/box.png"><img alt="Python Variables." src="../../_images/box.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Python Variables.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Python Variables.</span><a class="headerlink" href="#variables" title="Permalink to this image">¶</a></p>
 </div>
 <p>Image taken from: <a class="reference external" href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fmedium.com%2F%40stevenpcurtis.sc%2Fwhat-is-a-variable-3447ac1331b9&amp;psig=AOvVaw3YbYfgb7XFOJ_sHP5eliob&amp;ust=1595365663851000&amp;source=images&amp;cd=vfe&amp;ved=0CA0QjhxqFwoTCMi8nrfe3OoCFQAAAAAdAAAAABAZ">medium.com</a></p>
 <div class="dropdown admonition">
@@ -382,7 +345,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>The code first <code class="docutils literal notranslate"><span class="pre">binds</span></code> the names <strong>pi</strong> and <strong>radius</strong> to different objects of type int. It then binds the name <strong>area</strong> to a third object of type int. This is depicted on the left side of figure below.</p>
 <div class="figure align-default" id="variable-assignment">
 <a class="reference internal image-reference" href="../../_images/binding.png"><img alt="Variable Assignment." src="../../_images/binding.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Variable Assignment.</span><a class="headerlink" href="#variable-assignment" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Variable Assignment.</span><a class="headerlink" href="#variable-assignment" title="Permalink to this image">¶</a></p>
 </div>
 <p>If the program then executes <strong>radius = 14</strong>, the name radius is rebound to a different object of type int as shown on the right side.</p>
 <div class="admonition note">
@@ -715,7 +678,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     {
         requestKernel: true,
         binderOptions: {
-            repo: "MultiverseDF/book",
+            repo: "communitylab/data",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -760,56 +723,62 @@ commentsRunWhenDOMLoaded(addUtterances);
                 </div>
 
                 <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
-                    <ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../intro.html">
-   Data Science
-  </a>
- </li>
-</ul>
-<ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../Python%20editor.html">
-   Python Editor
-  </a>
- </li>
-</ul>
-<p class="caption">
+                    <p class="caption">
  <span class="caption-text">
-  Programming using Python
+  Programming with Python
  </span>
 </p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1 current active has-children active">
-  <a class="reference internal" href="Workflow_intro.html">
+<ul class="nav bd-sidenav nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro_python.html">
    1. Introduction to Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
+   2. 2. Sequence, Loops and Methods
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active active">
-    <a class="current reference internal" href="#">
-     Basic Python Data Types
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02/String%20Methods.html">
+     2.2. String Methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="workflow_2.html">
-     Branching Programs
+    <a class="reference internal" href="../02/List%20and%20Tuples.html">
+     2.3. List and Tuples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="workflow_3.html">
-     Visualizing Branching Programs
+    <a class="reference internal" href="../02/Loops.html">
+     2.4. Loops
     </a>
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
+   3. 3. Dictionaries and Comprehensions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Exercise%2001.html">
+   4. 📝 Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Solutions%2001.html">
+   5. 📃 Solution for Exercise 01
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
-   2. Sequence, Loops and Methods
+  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
+   6. 4. Functions and Exceptions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -818,50 +787,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02/String%20Methods.html">
-     String Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/List%20and%20Tuples.html">
-     List and Tuples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/Loops.html">
-     Loops
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
-   3. Dictionaries and Comprehensions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Exercise%2001.html">
-   📝 Exercise 01
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Solutions%2001.html">
-   📃 Solution for Exercise 01
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
-   4. Functions and Exceptions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../03/Exceptions.html">
-     Exceptions
+     6.4. Exceptions
     </a>
    </li>
   </ul>
@@ -882,8 +809,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../04/Pandas%20Intro.html">
    6. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -914,8 +841,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../05/sql%20intro.html">
    7. Relational Databases and SQL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -941,8 +868,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../06/viz%20intro.html">
    8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -983,10 +910,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <ul class="toolbar__main">
                     <li data-tippy-content="Table of Contents" class="btn__sidebar"><i data-feather="menu"></i></li>
                     <li data-tippy-content="Home"><a href="../../intro.html"><i data-feather="home"></i></a></li>
-                    <li class="btn__qelogo"><a href="" title=""><span class="show-for-sr"></span></a></li>
+                    <li class="btn__qelogo"><a href="https://community.multiverse.io/" title=""><span class="show-for-sr">Multiverse</span></a></li>
                     <!-- <li class="btn__search">
                         <form action="../../search.html" method="get">
-                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off">
+                            <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off">
                             <i data-feather="search"></i>
                         </form>
                     </li> -->
@@ -997,8 +924,9 @@ commentsRunWhenDOMLoaded(addUtterances);
                     <li data-tippy-content="Increase font size" class="btn__plus"><i data-feather="plus-circle"></i></li>
                     <li data-tippy-content="Decrease font size" class="btn__minus"><i data-feather="minus-circle"></i></li>
                     <li data-tippy-content="Change contrast" class="btn__contrast"><i data-feather="sunset"></i></li>
+                    <li class="settings-button" id="settingsButton"><div data-tippy-content="Launch Notebook"><i data-feather="play-circle"></i></div></li>
                         <li data-tippy-content="Download PDF" onClick="window.print()"><i data-feather="file"></i></li>
-                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/MultiverseDF/book/tree/main/Chapters/01/workflow_1.ipynb" download><i data-feather="github"></i></a></li>
+                    <li data-tippy-content="View Source"><a target="_blank" href="https://github.com/communitylab/data/tree/main/Chapters/01/intro_py.ipynb" download><i data-feather="github"></i></a></li>
                 </ul>
 
             </div>
@@ -1027,16 +955,20 @@ commentsRunWhenDOMLoaded(addUtterances);
                 <span class="label">Public</span>
                 <select id="launcher-public-input">
                 
+                    <option value="https://mybinder.org/v2/gh/communitylab/data/main?urlpath=tree/Chapters/01/intro_py.ipynb">BinderHub</option>
+                
+                    <option value="https://colab.research.google.com/github/communitylab/data/blob/main/Chapters/01/intro_py.ipynb">Colab</option>
+                
                 </select>
                 <i class="fas fa-check-circle"></i>
             </li>
             <li class="launcher-private">
                 <span class="label">Private</span>
-                <input type="text" id="launcher-private-input" data-repourl="" data-urlpath="" data-branch=>
+                <input type="text" id="launcher-private-input" data-repourl="https://github.com/communitylab/data" data-urlpath="tree/data/Chapters/01/intro_py.ipynb" data-branch=main>
                 <i class="fas fa-check-circle"></i>
             </li>
             </ul>
-            <p class="launch"><a href="" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
+            <p class="launch"><a href="https://mybinder.org/v2/gh/communitylab/data/main?urlpath=tree/Chapters/01/intro_py.ipynb" id="advancedLaunchButton" target="_blank">Launch Notebook</a></p>
             <script>
                 // QuantEcon Notebook Launcher
                 const launcherTypeElements = document.querySelectorAll('#settingsModal .modal-servers li');
@@ -1066,10 +998,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 }
                 const launcherPublic = document.getElementById('launcher-public-input');
                 const launcherPrivate = document.getElementById('launcher-private-input');
-                const pageName = "Chapters/01/workflow_1";
-                const repoURL = "";
-                const urlPath = "";
-                const branch = ""
+                const pageName = "Chapters/01/intro_py";
+                const repoURL = "https://github.com/communitylab/data";
+                const urlPath = "tree/data/Chapters/01/intro_py.ipynb";
+                const branch = "main"
                 const launchNotebookLink = document.getElementById('advancedLaunchButton');
 
                 // Highlight public server option if previous selection exists

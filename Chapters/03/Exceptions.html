@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exceptions &#8212; Data Science with Python</title>
+    <title>6.4. Exceptions &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -65,7 +65,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="5. Introduction to Numpy" href="../04/NumPy.html" />
-    <link rel="prev" title="4. Functions and Exceptions" href="Functions%20and%20Exceptions.html" />
+    <link rel="prev" title="6. 4. Functions and Exceptions" href="Functions%20and%20Exceptions.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,12 +115,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-are-exceptions">
-   What are exceptions?
+   6.4.1. What are exceptions?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#catching-exceptions">
-   Catching exceptions
+   6.4.2. Catching exceptions
   </a>
  </li>
 </ul>
@@ -169,7 +169,7 @@
                     <div>
                         
   <div class="section" id="exceptions">
-<h1>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6.4. </span>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h1>
 <hr style="height:1px;border:none;color:#666;background-color:#666;" />
 <p>So far we have made programs that ask the user to enter a string, and
 we also know how to convert that to an integer.</p>
@@ -215,7 +215,7 @@ Your number doubled: 16
 </div>
 <p>In this section we will look at how to fix that?</p>
 <div class="section" id="what-are-exceptions">
-<h2>What are exceptions?<a class="headerlink" href="#what-are-exceptions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.1. </span>What are exceptions?<a class="headerlink" href="#what-are-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>In the previous example we got a ValueError (first line of our error message). ValueError is an example of a <strong>exception</strong> which gets raised whenever a program execution hits an unexpected condition. The interactive prompt will display an error message and keep going.</p>
 <p>There are different types of exceptions like..</p>
 <div class="cell docutils container">
@@ -270,7 +270,7 @@ Your number doubled: 16
 <p>If an exception occurs, the program will stop and we get an error message.</p>
 </div>
 <div class="section" id="catching-exceptions">
-<h2>Catching exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.2. </span>Catching exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>If we need to try to do something and see if we get an exception, we
 can use <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code>. This is also known as <strong>catching</strong> the
 exception.</p>
@@ -374,13 +374,18 @@ Outside
                 <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
                     <p class="caption">
  <span class="caption-text">
-  Programming using Python
+  Programming with Python
  </span>
 </p>
 <ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01/Workflow_intro.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01/intro_python.html">
    1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
+   2. 2. Sequence, Loops and Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -389,77 +394,50 @@ Outside
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_1.html">
-     Basic Python Data Types
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_2.html">
-     Branching Programs
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_3.html">
-     Visualizing Branching Programs
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
-   2. Sequence, Loops and Methods
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../02/String%20Methods.html">
-     String Methods
+     2.2. String Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02/List%20and%20Tuples.html">
-     List and Tuples
+     2.3. List and Tuples
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../02/Loops.html">
-     Loops
+     2.4. Loops
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Dictionaries%20and%20Comprehensions.html">
-   3. Dictionaries and Comprehensions
+   3. 3. Dictionaries and Comprehensions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02/Exercise%2001.html">
-   📝 Exercise 01
+   4. 📝 Exercise 01
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../02/Solutions%2001.html">
-   📃 Solution for Exercise 01
+   5. 📃 Solution for Exercise 01
   </a>
  </li>
  <li class="toctree-l1 current active has-children active">
   <a class="reference internal" href="Functions%20and%20Exceptions.html">
-   4. Functions and Exceptions
+   6. 4. Functions and Exceptions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2 current active active">
     <a class="current reference internal" href="#">
-     Exceptions
+     6.4. Exceptions
     </a>
    </li>
   </ul>
@@ -480,8 +458,8 @@ Outside
   <a class="reference internal" href="../04/Pandas%20Intro.html">
    6. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -512,8 +490,8 @@ Outside
   <a class="reference internal" href="../05/sql%20intro.html">
    7. Relational Databases and SQL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -539,8 +517,8 @@ Outside
   <a class="reference internal" href="../06/viz%20intro.html">
    8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>

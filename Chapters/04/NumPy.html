@@ -67,7 +67,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="6. DataFrames in Python" href="Pandas%20Intro.html" />
-    <link rel="prev" title="Exceptions" href="../03/Exceptions.html" />
+    <link rel="prev" title="6.4. Exceptions" href="../03/Exceptions.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -427,16 +427,16 @@ Filled array
  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]] 
 
-[[0.74226351 0.28049577 0.85327894 0.83841001 0.5442443  0.27704423
-  0.17798306 0.22132983 0.53926762 0.49918459]
- [0.39846114 0.34807469 0.19182691 0.64513901 0.78672069 0.48790486
-  0.55888152 0.39675989 0.09549452 0.85797308]
- [0.76236536 0.09827347 0.32087181 0.06031101 0.37194424 0.71175697
-  0.98303717 0.13117096 0.9842183  0.59155923]
- [0.92473285 0.11393592 0.05593061 0.55667903 0.21417073 0.19233675
-  0.72394753 0.21387383 0.38602995 0.30026646]
- [0.75621767 0.86043404 0.74360577 0.86939562 0.44943707 0.87922829
-  0.27788751 0.75601246 0.14456071 0.70660971]]
+[[0.37013519 0.74219783 0.55204033 0.8089255  0.67256169 0.67171846
+  0.04971198 0.2421033  0.68996137 0.63852827]
+ [0.73612704 0.53961929 0.1229261  0.89663309 0.83202772 0.83511469
+  0.19278258 0.02591961 0.84278757 0.67951886]
+ [0.10375101 0.51312511 0.20973144 0.81990762 0.02394884 0.51771857
+  0.41080613 0.49833143 0.21933035 0.65105106]
+ [0.63525216 0.97827632 0.12521034 0.74693289 0.41748802 0.97268061
+  0.3769407  0.3845412  0.48424424 0.97510886]
+ [0.7071379  0.08417188 0.43415941 0.73156897 0.90090859 0.88869918
+  0.10920603 0.43841287 0.95127082 0.16670329]]
 </pre></div>
 </div>
 </div>
@@ -688,19 +688,19 @@ This argument may be named or unnamed - doesn’t matter. An example:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original array:
-[[0.07885317 0.11287854 0.28459029]
- [0.40011764 0.85806281 0.95402019]
- [0.41253549 0.76914663 0.38459751]] 
+[[0.6217747  0.40466191 0.83928633]
+ [0.40126058 0.15872625 0.53000101]
+ [0.18968977 0.82138543 0.23084566]] 
 
 Use the round() method with the argument 3:
-[[0.079 0.113 0.285]
- [0.4   0.858 0.954]
- [0.413 0.769 0.385]] 
+[[0.622 0.405 0.839]
+ [0.401 0.159 0.53 ]
+ [0.19  0.821 0.231]] 
 
 Use the round() method with the named argument 5:
-[[0.07885 0.11288 0.28459]
- [0.40012 0.85806 0.95402]
- [0.41254 0.76915 0.3846 ]] 
+[[0.62177 0.40466 0.83929]
+ [0.40126 0.15873 0.53   ]
+ [0.18969 0.82139 0.23085]] 
 </pre></div>
 </div>
 </div>
@@ -796,13 +796,18 @@ Shape after ravel(): (10,)
                 <nav class="sidebar__nav" id="sidebar-nav" aria-label="Main navigation">
                     <p class="caption">
  <span class="caption-text">
-  Programming using Python
+  Programming with Python
  </span>
 </p>
 <ul class="nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../01/Workflow_intro.html">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01/intro_python.html">
    1. Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
+   2. 2. Sequence, Loops and Methods
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -811,25 +816,40 @@ Shape after ravel(): (10,)
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_1.html">
-     Basic Python Data Types
+    <a class="reference internal" href="../02/String%20Methods.html">
+     2.2. String Methods
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_2.html">
-     Branching Programs
+    <a class="reference internal" href="../02/List%20and%20Tuples.html">
+     2.3. List and Tuples
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../01/workflow_3.html">
-     Visualizing Branching Programs
+    <a class="reference internal" href="../02/Loops.html">
+     2.4. Loops
     </a>
    </li>
   </ul>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
+   3. 3. Dictionaries and Comprehensions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Exercise%2001.html">
+   4. 📝 Exercise 01
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02/Solutions%2001.html">
+   5. 📃 Solution for Exercise 01
+  </a>
+ </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
-   2. Sequence, Loops and Methods
+  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
+   6. 4. Functions and Exceptions
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -838,50 +858,8 @@ Shape after ravel(): (10,)
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../02/String%20Methods.html">
-     String Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/List%20and%20Tuples.html">
-     List and Tuples
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/Loops.html">
-     Loops
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../03/Dictionaries%20and%20Comprehensions.html">
-   3. Dictionaries and Comprehensions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Exercise%2001.html">
-   📝 Exercise 01
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../02/Solutions%2001.html">
-   📃 Solution for Exercise 01
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
-   4. Functions and Exceptions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../03/Exceptions.html">
-     Exceptions
+     6.4. Exceptions
     </a>
    </li>
   </ul>
@@ -902,8 +880,8 @@ Shape after ravel(): (10,)
   <a class="reference internal" href="Pandas%20Intro.html">
    6. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -934,8 +912,8 @@ Shape after ravel(): (10,)
   <a class="reference internal" href="../05/sql%20intro.html">
    7. Relational Databases and SQL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -961,8 +939,8 @@ Shape after ravel(): (10,)
   <a class="reference internal" href="../06/viz%20intro.html">
    8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
