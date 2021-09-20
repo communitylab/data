@@ -17,16 +17,15 @@ parts:
     - file: Chapters/02/Solutions 01
     - file: Chapters/03/Functions and Exceptions
 
-- caption: Data Wrangling using Python
-  numbered: false
+- caption: Data Wrangling with Python
+  numbered: true
   chapters:
     - file: Chapters/04/NumPy
     - file: Chapters/04/Pandas Intro
-      sections:
-        - file: Chapters/04/Introduction to Pandas
-        - file: Chapters/04/Pandas grouping and pivoting
-        - file: Chapters/04/Pandas apply strings and plotting
-        - file: Chapters/04/Merge and Concat Dataset
+    - file: Chapters/04/Pandas grouping and pivoting
+    - file: Chapters/04/Merge and Concat Dataset
+    - file: Chapters/04/Pandas apply strings and plotting
+        
     - file: Chapters/05/sql intro
       sections:
         - file: Chapters/05/sql rdbms
