@@ -3,10 +3,14 @@ background-image: url(https://jareddillard.com/assets/images/svg/topography.svg)
 }
 
 .toolbar__inner{
-height: 70px;
+height: 60px;
 }
 
 li.btn__contrast{
+display: none;
+}
+
+div.powered{
 display: none;
 }
 

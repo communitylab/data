@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Customizing Plots using matplotlib &#8212; Data Science with Python</title>
+    <title>13.3. Customizing Plots using matplotlib &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,7 +64,7 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="Visualizing Qualitative Data" href="viz%20qualitative.html" />
+    <link rel="prev" title="13.2. Visualizing Qualitative Data" href="viz%20qualitative.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -114,22 +114,22 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customizing-figures-and-axes">
-   Customizing Figures and Axes
+   13.3.1. Customizing Figures and Axes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customizing-marks">
-   Customizing Marks
+   13.3.2. Customizing Marks
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#annotating-our-charts">
-   Annotating our charts
+   13.3.3. Annotating our charts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#customizing-a-seaborn-plot-using-matplotlib">
-   Customizing a
+   13.3.4. Customizing a
    <code class="docutils literal notranslate">
     <span class="pre">
      seaborn
@@ -189,7 +189,7 @@
                     <div>
                         
   <div class="section" id="customizing-plots-using-matplotlib">
-<h1>Customizing Plots using matplotlib<a class="headerlink" href="#customizing-plots-using-matplotlib" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">13.3. </span>Customizing Plots using matplotlib<a class="headerlink" href="#customizing-plots-using-matplotlib" title="Permalink to this headline">¶</a></h1>
 <hr style="height:1px;border:none;color:#666;background-color:#666;" />
 <p>Although <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> allows us to quickly create many types of plots, it does not give us fine-grained control over the chart. For example, we cannot use seaborn to modify a plot’s title, change x or y-axis labels, or add annotations to a plot. Instead, we must use the matplotlib library that seaborn is based off of.</p>
 <p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> provides basic building blocks for creating plots in Python. Although it gives great control, it is also more verbose — recreating the seaborn plots from the previous sections in matplotlib would take many lines of code. In fact, we can think of seaborn as a set of useful shortcuts to create matplotlib plots. Although we prefer to prototype plots in seaborn, in order to customize plots for communicating our findings we will need to learn basic pieces of matplotlib.</p>
@@ -214,7 +214,7 @@
 </div>
 </div>
 <div class="section" id="customizing-figures-and-axes">
-<h2>Customizing Figures and Axes<a class="headerlink" href="#customizing-figures-and-axes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.1. </span>Customizing Figures and Axes<a class="headerlink" href="#customizing-figures-and-axes" title="Permalink to this headline">¶</a></h2>
 <hr><p>In order to create a plot in <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>, we create a <em>figure</em>, then add an <em>axes</em> to the figure. In matplotlib, an axes is a single chart, and figures can contain multiple axes in a tablular layout. An axes contains <em>marks</em>, the lines or patches drawn on the plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -288,7 +288,7 @@
 </div>
 </div>
 <div class="section" id="customizing-marks">
-<h2>Customizing Marks<a class="headerlink" href="#customizing-marks" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.2. </span>Customizing Marks<a class="headerlink" href="#customizing-marks" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>To change properties of the plot marks themselves (e.g. the lines in the plot above), we can pass additional arguments into <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>.</p>
 <div class="cell docutils container">
@@ -304,7 +304,7 @@
 <p>Checking the <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> documentation is the easiest way to figure out which arguments are available for each method.</p>
 </div>
 <div class="section" id="annotating-our-charts">
-<h2>Annotating our charts<a class="headerlink" href="#annotating-our-charts" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.3. </span>Annotating our charts<a class="headerlink" href="#annotating-our-charts" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>In matplotlib, text can be added either relative to an individual axis object or to the whole figure.</p>
 <p>These commands add text to the Axes:</p>
@@ -361,7 +361,7 @@
 </div>
 </div>
 <div class="section" id="customizing-a-seaborn-plot-using-matplotlib">
-<h2>Customizing a <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plot using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#customizing-a-seaborn-plot-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">13.3.4. </span>Customizing a <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> plot using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code><a class="headerlink" href="#customizing-a-seaborn-plot-using-matplotlib" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Now that we’ve seen how to use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to customize a plot, we can use the same methods to customize seaborn plots since seaborn creates plots using matplotlib behind-the-scenes.</p>
 <div class="cell docutils container">
@@ -629,18 +629,38 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Data Wrangling using Python
+  Data Wrangling with Python
  </span>
 </p>
 <ul class="current nav bd-sidenav nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../04/NumPy.html">
-   5. Introduction to Numpy
+   7. Introduction to Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Pandas%20Intro.html">
+   8. DataFrames in Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
+   9. Grouping and Pivoting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
+   10. Working with Multiple DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
+   11. Applying Functions and Plotting in Pandas
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../04/Pandas%20Intro.html">
-   6. DataFrames in Python
+  <a class="reference internal" href="../05/sql%20intro.html">
+   12. 7. Relational Databases and SQL
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -649,77 +669,45 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../04/Introduction%20to%20Pandas.html">
-     Introduction to Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
-     Grouping and Pivoting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
-     Applying Functions and Plotting in Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
-     Working with Multiple DataFrames
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   7. Relational Databases and SQL
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../05/sql%20rdbms.html">
-     The Relational Model
+     12.1. The Relational Model
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../05/sql%20basics.html">
-     SQL
+     12.2. SQL
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../05/sql%20joins.html">
-     SQL Joins
+     12.3. SQL Joins
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children active">
   <a class="reference internal" href="viz%20intro.html">
-   8. Data Visualization
+   13. 8. Data Visualization
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="viz%20quantitative.html">
-     Visualizing Quantitative Data
+     13.1. Visualizing Quantitative Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="viz%20qualitative.html">
-     Visualizing Qualitative Data
+     13.2. Visualizing Qualitative Data
     </a>
    </li>
    <li class="toctree-l2 current active active">
     <a class="current reference internal" href="#">
-     Customizing Plots using matplotlib
+     13.3. Customizing Plots using matplotlib
     </a>
    </li>
   </ul>

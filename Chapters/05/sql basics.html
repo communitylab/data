@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SQL &#8212; Data Science with Python</title>
+    <title>12.2. SQL &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,8 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="SQL Joins" href="sql%20joins.html" />
-    <link rel="prev" title="The Relational Model" href="sql%20rdbms.html" />
+    <link rel="next" title="12.3. SQL Joins" href="sql%20joins.html" />
+    <link rel="prev" title="12.1. The Relational Model" href="sql%20rdbms.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,7 +115,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#executing-sql-queries-through-pandas">
-   Executing SQL Queries through
+   12.2.1. Executing SQL Queries through
    <code class="docutils literal notranslate">
     <span class="pre">
      pandas
@@ -125,44 +125,44 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sql-syntax">
-   SQL Syntax
+   12.2.2. SQL Syntax
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#select-and-from">
-     SELECT and FROM
+     12.2.2.1. SELECT and FROM
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#where">
-     WHERE
+     12.2.2.2. WHERE
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#aggregate-functions">
-     Aggregate Functions
+     12.2.2.3. Aggregate Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#group-by-and-having">
-     GROUP BY and HAVING
+     12.2.2.4. GROUP BY and HAVING
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#order-by-and-limit">
-     ORDER BY and LIMIT
+     12.2.2.5. ORDER BY and LIMIT
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conceptual-sql-evaluation">
-     Conceptual SQL Evaluation
+     12.2.2.6. Conceptual SQL Evaluation
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   Summary
+   12.2.3. Summary
   </a>
  </li>
 </ul>
@@ -211,7 +211,7 @@
                     <div>
                         
   <div class="section" id="sql">
-<h1>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">12.2. </span>SQL<a class="headerlink" href="#sql" title="Permalink to this headline">¶</a></h1>
 <hr style="height:1px;border:none;color:#666;background-color:#666;" />
 <p><strong>SQL</strong> (Structured Query Language) is a programming language that has operations to define, logically organize, manipulate, and perform calculations on data stored in a relational database management system (RDBMS).</p>
 <p>SQL is a declarative language. This means that the user only needs to specify <em>what</em> kind of data they want, not <em>how</em> to obtain it. An example is shown below, with an imperative example for comparison:</p>
@@ -221,7 +221,7 @@
 </ul>
 <p>In this tutorial, we will write SQL queries as Python strings, then use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to execute the SQL query and read the result into a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. As we walk through the basics of SQL syntax, we’ll also occasionally show <code class="docutils literal notranslate"><span class="pre">pandas</span></code> equivalents for comparison purposes.</p>
 <div class="section" id="executing-sql-queries-through-pandas">
-<h2>Executing SQL Queries through <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#executing-sql-queries-through-pandas" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2.1. </span>Executing SQL Queries through <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#executing-sql-queries-through-pandas" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>To execute SQL queries from Python, we will connect to a database using the <a class="reference external" href="http://docs.sqlalchemy.org/en/latest/core/tutorial.html">sqlalchemy</a> library. Then we can use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_sql.html">pd.read_sql</a> to execute SQL queries through this connection.</p>
 <div class="cell docutils container">
@@ -310,7 +310,7 @@
 </div>
 </div>
 <div class="section" id="sql-syntax">
-<h2>SQL Syntax<a class="headerlink" href="#sql-syntax" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2.2. </span>SQL Syntax<a class="headerlink" href="#sql-syntax" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>All SQL queries take the general form below:</p>
 <div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="p">[</span><span class="k">DISTINCT</span><span class="p">]</span> <span class="o">&lt;</span><span class="k">column</span> <span class="n">expression</span> <span class="n">list</span><span class="o">&gt;</span>
@@ -331,7 +331,7 @@
 </ol>
 </div>
 <div class="section" id="select-and-from">
-<h3>SELECT and FROM<a class="headerlink" href="#select-and-from" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.1. </span>SELECT and FROM<a class="headerlink" href="#select-and-from" title="Permalink to this headline">¶</a></h3>
 <p>The two mandatory statements in a SQL query are:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">SELECT</span></code> indicates the columns that we want to view.</p></li>
@@ -642,7 +642,7 @@
 </div>
 </div>
 <div class="section" id="where">
-<h3>WHERE<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.2. </span>WHERE<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause allows us to specify certain constraints for the returned data; these constraints are often referred to as <strong>predicates</strong>. For example, to retrieve only gadgets that are under $500:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -867,7 +867,7 @@
 </div>
 </div>
 <div class="section" id="aggregate-functions">
-<h3>Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.3. </span>Aggregate Functions<a class="headerlink" href="#aggregate-functions" title="Permalink to this headline">¶</a></h3>
 <p>So far, we’ve only worked with data from the existing rows in the table; that is, all of our returned tables have been some subset of the entries found in the table. But to conduct data analysis, we’ll want to compute aggregate values over our data. In SQL, these are called <strong>aggregate functions</strong>.</p>
 <p>If we want to find the average price of all gadgets in the <code class="docutils literal notranslate"><span class="pre">prices</span></code> relation:</p>
 <div class="cell docutils container">
@@ -927,7 +927,7 @@
 <p>A complete list of PostgreSQL aggregate functions can be found <a class="reference external" href="https://www.postgresql.org/docs/9.2/static/functions.html">here</a>. Though we’re using PostgreSQL as our primary version of SQL, keep in mind that there are many other variations of SQL (MySQL, SQLite, etc.) that use different function names and have different functions available.</p>
 </div>
 <div class="section" id="group-by-and-having">
-<h3>GROUP BY and HAVING<a class="headerlink" href="#group-by-and-having" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.4. </span>GROUP BY and HAVING<a class="headerlink" href="#group-by-and-having" title="Permalink to this headline">¶</a></h3>
 <p>With aggregate functions, we can execute more complicated SQL queries. To operate on more granular aggregate data, we can use the following two clauses:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> takes a list of columns and groups the table like the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.groupby.html">pd.DataFrame.groupby</a> function in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
@@ -1094,7 +1094,7 @@
 </div>
 </div>
 <div class="section" id="order-by-and-limit">
-<h3>ORDER BY and LIMIT<a class="headerlink" href="#order-by-and-limit" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.5. </span>ORDER BY and LIMIT<a class="headerlink" href="#order-by-and-limit" title="Permalink to this headline">¶</a></h3>
 <p>These clauses allow us to control the presentation of the data:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> lets us present the data in alphabetical order of column values. By default, ORDER BY uses ascending order (<code class="docutils literal notranslate"><span class="pre">ASC</span></code>) but we can specify descending order using <code class="docutils literal notranslate"><span class="pre">DESC</span></code>.</p></li>
@@ -1218,7 +1218,7 @@ For comparison, in <code class="docutils literal notranslate"><span class="pre">
 <p>(Again, we see that the indices are out of order in the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. As before, <code class="docutils literal notranslate"><span class="pre">pandas</span></code> returns a view on our DataFrame <code class="docutils literal notranslate"><span class="pre">prices</span></code>, whereas SQL is displaying a new table each time that we execute a query.)</p>
 </div>
 <div class="section" id="conceptual-sql-evaluation">
-<h3>Conceptual SQL Evaluation<a class="headerlink" href="#conceptual-sql-evaluation" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">12.2.2.6. </span>Conceptual SQL Evaluation<a class="headerlink" href="#conceptual-sql-evaluation" title="Permalink to this headline">¶</a></h3>
 <p>Clauses in a SQL query are executed in a specific order. Unfortunately, this order differs from the order that the clauses are written in a SQL query. From first executed to last:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">FROM</span></code>: One or more source tables</p></li>
@@ -1231,7 +1231,7 @@ For comparison, in <code class="docutils literal notranslate"><span class="pre">
 </div>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">12.2.3. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>We have introduced SQL syntax and the most important SQL statements needed to conduct data analysis using a relational database management system.</p>
 </div>
@@ -1325,97 +1325,85 @@ For comparison, in <code class="docutils literal notranslate"><span class="pre">
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Data Wrangling using Python
+  Data Wrangling with Python
  </span>
 </p>
 <ul class="current nav bd-sidenav nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="../04/NumPy.html">
-   5. Introduction to Numpy
+   7. Introduction to Numpy
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../04/Pandas%20Intro.html">
-   6. DataFrames in Python
+   8. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Introduction%20to%20Pandas.html">
-     Introduction to Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
-     Grouping and Pivoting
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
-     Applying Functions and Plotting in Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
-     Working with Multiple DataFrames
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Pandas%20grouping%20and%20pivoting.html">
+   9. Grouping and Pivoting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Merge%20and%20Concat%20Dataset.html">
+   10. Working with Multiple DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04/Pandas%20apply%20strings%20and%20plotting.html">
+   11. Applying Functions and Plotting in Pandas
+  </a>
  </li>
  <li class="toctree-l1 current active has-children active">
   <a class="reference internal" href="sql%20intro.html">
-   7. Relational Databases and SQL
+   12. 7. Relational Databases and SQL
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="sql%20rdbms.html">
-     The Relational Model
+     12.1. The Relational Model
     </a>
    </li>
    <li class="toctree-l2 current active active">
     <a class="current reference internal" href="#">
-     SQL
+     12.2. SQL
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="sql%20joins.html">
-     SQL Joins
+     12.3. SQL Joins
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../06/viz%20intro.html">
-   8. Data Visualization
+   13. 8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20quantitative.html">
-     Visualizing Quantitative Data
+     13.1. Visualizing Quantitative Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20qualitative.html">
-     Visualizing Qualitative Data
+     13.2. Visualizing Qualitative Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20matplotlib.html">
-     Customizing Plots using matplotlib
+     13.3. Customizing Plots using matplotlib
     </a>
    </li>
   </ul>

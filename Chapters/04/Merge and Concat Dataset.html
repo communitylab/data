@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Working with Multiple DataFrames &#8212; Data Science with Python</title>
+    <title>10. Working with Multiple DataFrames &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,19 +64,19 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="7. Relational Databases and SQL" href="../05/sql%20intro.html" />
-    <link rel="prev" title="Applying Functions and Plotting in Pandas" href="Pandas%20apply%20strings%20and%20plotting.html" />
+    <link rel="next" title="11. Applying Functions and Plotting in Pandas" href="Pandas%20apply%20strings%20and%20plotting.html" />
+    <link rel="prev" title="9. Grouping and Pivoting" href="Pandas%20grouping%20and%20pivoting.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
 <meta name="keywords" content="" />
-<meta name="description" content=Working with Multiple DataFrames  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that you  />
+<meta name="description" content=Working with Multiple DataFrames  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that yo />
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:title" content="Working with Multiple DataFrames"/>
-<meta name="twitter:description" content="Working with Multiple DataFrames  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that you ">
+<meta name="twitter:description" content="Working with Multiple DataFrames  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that yo">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
@@ -85,7 +85,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
 <meta property="og:image" content="https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png" />
-<meta property="og:description" content="Working with Multiple DataFrames  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that you " />
+<meta property="og:description" content="Working with Multiple DataFrames  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;   Often you’ll work with multiple dataframes that yo" />
 <meta property="og:site_name" content="Data Science with Python" />
 <meta name="theme-color" content="#ffffff" />
 
@@ -115,7 +115,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sticking-dataframes-together-with-pd-concat">
-   Sticking DataFrames Together with
+   10.1. Sticking DataFrames Together with
    <code class="docutils literal notranslate">
     <span class="pre">
      pd.concat()
@@ -125,7 +125,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#joining-dataframes-with-pd-merge">
-   Joining DataFrames with
+   10.2. Joining DataFrames with
    <code class="docutils literal notranslate">
     <span class="pre">
      pd.merge()
@@ -179,15 +179,15 @@
                     <div>
                         
   <div class="section" id="working-with-multiple-dataframes">
-<h1>Working with Multiple DataFrames<a class="headerlink" href="#working-with-multiple-dataframes" title="Permalink to this headline">¶</a></h1>
-<hr style="height:1px;border:none;color:#666;background-color:#666;" />
+<h1><span class="section-number">10. </span>Working with Multiple DataFrames<a class="headerlink" href="#working-with-multiple-dataframes" title="Permalink to this headline">¶</a></h1>
+<hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p>Often you’ll work with multiple dataframes that you want to stick together or merge. <code class="docutils literal notranslate"><span class="pre">df.merge()</span></code> and <code class="docutils literal notranslate"><span class="pre">df.concat()</span></code> are all you need to know for combining dataframes. The Pandas <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html">documentation</a> is very helpful for these functions, but they are pretty easy to grasp.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The example joins shown in this section are inspired by <a class="reference external" href="https://stat545.com/join-cheatsheet.html">Chapter 15</a> of Jenny Bryan’s STAT 545 materials.</p>
 </div>
 <div class="section" id="sticking-dataframes-together-with-pd-concat">
-<h2>Sticking DataFrames Together with <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code><a class="headerlink" href="#sticking-dataframes-together-with-pd-concat" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>Sticking DataFrames Together with <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code><a class="headerlink" href="#sticking-dataframes-together-with-pd-concat" title="Permalink to this headline">¶</a></h2>
 <hr>
 You can use `pd.concat()` to stick dataframes together:
 - Vertically: if they have the same **columns**, OR
@@ -585,7 +585,7 @@ You can use `pd.concat()` to stick dataframes together:
 </div>
 </div>
 <div class="section" id="joining-dataframes-with-pd-merge">
-<h2>Joining DataFrames with <code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code><a class="headerlink" href="#joining-dataframes-with-pd-merge" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>Joining DataFrames with <code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code><a class="headerlink" href="#joining-dataframes-with-pd-merge" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code> gives you the ability to “join” dataframes using different rules (just like with SQL if you’re familiar with it). You can use <code class="docutils literal notranslate"><span class="pre">df.merge()</span></code> to join dataframes based on shared <code class="docutils literal notranslate"><span class="pre">key</span></code> columns. Methods include:</p>
 <ul class="simple">
@@ -1272,50 +1272,65 @@ You can use `pd.concat()` to stick dataframes together:
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Data Wrangling using Python
+  Data Wrangling with Python
  </span>
 </p>
 <ul class="current nav bd-sidenav nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="NumPy.html">
-   5. Introduction to Numpy
+   7. Introduction to Numpy
   </a>
  </li>
- <li class="toctree-l1 current active has-children active">
+ <li class="toctree-l1">
   <a class="reference internal" href="Pandas%20Intro.html">
-   6. DataFrames in Python
+   8. DataFrames in Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
+   9. Grouping and Pivoting
+  </a>
+ </li>
+ <li class="toctree-l1 current active active">
+  <a class="current reference internal" href="#">
+   10. Working with Multiple DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
+   11. Applying Functions and Plotting in Pandas
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../05/sql%20intro.html">
+   12. 7. Relational Databases and SQL
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Introduction%20to%20Pandas.html">
-     Introduction to Pandas
+    <a class="reference internal" href="../05/sql%20rdbms.html">
+     12.1. The Relational Model
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
-     Grouping and Pivoting
+    <a class="reference internal" href="../05/sql%20basics.html">
+     12.2. SQL
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
-     Applying Functions and Plotting in Pandas
-    </a>
-   </li>
-   <li class="toctree-l2 current active active">
-    <a class="current reference internal" href="#">
-     Working with Multiple DataFrames
+    <a class="reference internal" href="../05/sql%20joins.html">
+     12.3. SQL Joins
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   7. Relational Databases and SQL
+  <a class="reference internal" href="../06/viz%20intro.html">
+   13. 8. Data Visualization
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -1324,45 +1339,18 @@ You can use `pd.concat()` to stick dataframes together:
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../05/sql%20rdbms.html">
-     The Relational Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05/sql%20basics.html">
-     SQL
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../05/sql%20joins.html">
-     SQL Joins
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   8. Data Visualization
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20quantitative.html">
-     Visualizing Quantitative Data
+     13.1. Visualizing Quantitative Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20qualitative.html">
-     Visualizing Qualitative Data
+     13.2. Visualizing Qualitative Data
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../06/viz%20matplotlib.html">
-     Customizing Plots using matplotlib
+     13.3. Customizing Plots using matplotlib
     </a>
    </li>
   </ul>
