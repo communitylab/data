@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. 4. Functions and Exceptions &#8212; Data Science with Python</title>
+    <title>6. Functions and Exceptions &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,28 +64,28 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="6.4. Exceptions" href="Exceptions.html" />
+    <link rel="next" title="5. Introduction to Numpy" href="../04/NumPy.html" />
     <link rel="prev" title="5. 📃 Solution for Exercise 01" href="../02/Solutions%2001.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
 <meta name="keywords" content="" />
-<meta name="description" content=4. Functions and Exceptions  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Pytho />
+<meta name="description" content=Functions and Exceptions  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Python />
 
 <!-- Twitter tags -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@" />
-<meta name="twitter:title" content="4. Functions and Exceptions"/>
-<meta name="twitter:description" content="4. Functions and Exceptions  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Pytho">
+<meta name="twitter:title" content="Functions and Exceptions"/>
+<meta name="twitter:description" content="Functions and Exceptions  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Python">
 <meta name="twitter:creator" content="@">
 <meta name="twitter:image" content="">
 
 <!-- Opengraph tags -->
-<meta property="og:title" content="4. Functions and Exceptions" />
+<meta property="og:title" content="Functions and Exceptions" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="None" />
 <meta property="og:image" content="https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png" />
-<meta property="og:description" content="4. Functions and Exceptions  &lt;hr style=&#34;height:1px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Pytho" />
+<meta property="og:description" content="Functions and Exceptions  &lt;hr style=&#34;height:0.6px;border:none;color:#666;background-color:#666;&#34; /&gt;  We have used functions that are already available in Python" />
 <meta property="og:site_name" content="Data Science with Python" />
 <meta name="theme-color" content="#ffffff" />
 
@@ -148,17 +148,34 @@
      6.1.6. Functions with Arbitrary Number of Arguments
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#functions-as-a-data-type">
+     6.1.7. Functions as  a Data Type
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#anonymous-functions">
+     6.1.8. Anonymous Functions
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#functions-as-a-data-type">
-   6.2. Functions as  a Data Type
+  <a class="reference internal nav-link" href="#exceptions">
+   6.2. Exceptions
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#anonymous-functions">
-   6.3. Anonymous Functions
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-exceptions">
+     6.2.1. What are exceptions?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#catching-exceptions">
+     6.2.2. Catching exceptions
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -190,7 +207,7 @@
 
                         <p class="page__header-heading"><a href="../../intro.html">Data Science with Python</a></p>
 
-                        <p class="page__header-subheading">4. Functions and Exceptions</p>
+                        <p class="page__header-subheading">Functions and Exceptions</p>
 
                     </div>
 
@@ -206,8 +223,8 @@
                     <div>
                         
   <div class="section" id="functions-and-exceptions">
-<h1><span class="section-number">6. </span>4. Functions and Exceptions<a class="headerlink" href="#functions-and-exceptions" title="Permalink to this headline">¶</a></h1>
-<hr style="height:1px;border:none;color:#666;background-color:#666;" /><p>We have used functions that are already available in Python, but never defineda function on our own. A <a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">function</a> is a reusable piece of code that can accept input parameters, also known as “arguments”.The purpose of defining a function is to give a name to a computational process that may be applied multiple times. There are many situations in computing that require repeated computation. For example, it is often the case that we want to perform the same manipulation on every value in a column of a table.</p>
+<h1><span class="section-number">6. </span>Functions and Exceptions<a class="headerlink" href="#functions-and-exceptions" title="Permalink to this headline">¶</a></h1>
+<hr style="height:0.6px;border:none;color:#666;background-color:#666;" /><p>We have used functions that are already available in Python, but never defineda function on our own. A <a class="reference external" href="https://docs.python.org/3/tutorial/controlflow.html#defining-functions">function</a> is a reusable piece of code that can accept input parameters, also known as “arguments”.The purpose of defining a function is to give a name to a computational process that may be applied multiple times. There are many situations in computing that require repeated computation. For example, it is often the case that we want to perform the same manipulation on every value in a column of a table.</p>
 <div class="section" id="defining-a-function">
 <h2><span class="section-number">6.1. </span>Defining a Function<a class="headerlink" href="#defining-a-function" title="Permalink to this headline">¶</a></h2>
 <p>The definition of the <code class="docutils literal notranslate"><span class="pre">double</span></code> function below simply doubles a number.</p>
@@ -553,9 +570,8 @@
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="functions-as-a-data-type">
-<h2><span class="section-number">6.2. </span>Functions as  a Data Type<a class="headerlink" href="#functions-as-a-data-type" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">6.1.7. </span>Functions as  a Data Type<a class="headerlink" href="#functions-as-a-data-type" title="Permalink to this headline">¶</a></h3>
 <p>In Python, functions are actually a data type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -619,7 +635,7 @@
 </ul>
 </div>
 <div class="section" id="anonymous-functions">
-<h2><span class="section-number">6.3. </span>Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">6.1.8. </span>Anonymous Functions<a class="headerlink" href="#anonymous-functions" title="Permalink to this headline">¶</a></h3>
 <p>There are two ways to define functions in Python. The way we’ve beenusing up until now:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -663,7 +679,159 @@
 </div>
 <p>The two approaches above are identical. The one with <code class="docutils literal notranslate"><span class="pre">lambda</span></code> is called an <strong>anonymous function</strong>. Anonymous functions can only take up one line of code, so they aren’t appropriate in most cases, but can be useful for smaller things.</p>
 </div>
-<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="exceptions">
+<h2><span class="section-number">6.2. </span>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<p>So far we have made programs that ask the user to enter a string, and
+we also know how to convert that to an integer.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter something: &quot;</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your number doubled:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter something: 8
+Your number doubled: 16
+</pre></div>
+</div>
+</div>
+</div>
+<p>This code seems to work fine when a number is given as an input but doesn’t work when the given input is a non-numeric type like a string or list</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter something: &quot;</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your number doubled:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter something: eight
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">339</span><span class="n">ef37addcc</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">text</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter something: &quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Your number doubled:&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;eight&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this section we will look at how to fix that?</p>
+<div class="section" id="what-are-exceptions">
+<h3><span class="section-number">6.2.1. </span>What are exceptions?<a class="headerlink" href="#what-are-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>In the previous example we got a ValueError (first line of our error message). ValueError is an example of a <strong>exception</strong> which gets raised whenever a program execution hits an unexpected condition. The interactive prompt will display an error message and keep going.</p>
+<p>There are different types of exceptions like..</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># index error</span>
+<span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="n">mylist</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="mi">4911</span><span class="n">d298beb3</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># index error</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mylist</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="ne">IndexError</span>: list index out of range
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># type error</span>
+<span class="nb">int</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="mi">53</span><span class="n">bfeee10670</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># type error</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">int</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: int() argument must be a string, a bytes-like object or a number, not &#39;list&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Some common error types include:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>: Python can’t parse program</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NameError</span></code>: local or global name not found</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>: attribute reference fails “</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TypeError</span></code>: operand doesn’t have correct type</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ValueError</span></code>: operand type okay, but value is illegal</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IOError</span></code>: IO system reports malfunction (e.g. file not found)</p></li>
+</ul>
+<p>If an exception occurs, the program will stop and we get an error message.</p>
+</div>
+<div class="section" id="catching-exceptions">
+<h3><span class="section-number">6.2.2. </span>Catching exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>If we need to try to do something and see if we get an exception, we
+can use <code class="docutils literal notranslate"><span class="pre">try</span></code> and <code class="docutils literal notranslate"><span class="pre">except</span></code>. This is also known as <strong>catching</strong> the
+exception.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me a number:&quot;</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me another number:&quot;</span><span class="p">))</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Okay&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bug in user input.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outside&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Give me a number:4
+Give me another number:5
+0.8
+Okay
+Outside
+</pre></div>
+</div>
+</div>
+</div>
+<p>The except part doesn’t run if the try part succeeds.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me a number:&quot;</span><span class="p">))</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me another number:&quot;</span><span class="p">))</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">/</span><span class="n">b</span><span class="p">)</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Okay&quot;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bug in user input.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Outside&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Give me a number:lol
+Bug in user input.
+Outside
+</pre></div>
+</div>
+</div>
+</div>
+<p>Python tries to execute the code in the <code class="docutils literal notranslate"><span class="pre">try</span></code> block. If an error is encountered, we “catch” this in the <code class="docutils literal notranslate"><span class="pre">except</span></code> block (also called <code class="docutils literal notranslate"><span class="pre">try</span></code>/<code class="docutils literal notranslate"><span class="pre">catch</span></code> in other languages).</p>
+</div>
 </div>
 </div>
 
@@ -727,31 +895,14 @@
    1. Introduction to Python
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../02/Sequence%2C%20Loops%20and%20Methods.html">
    2. Sequence, Loops and Methods
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/String%20Methods.html">
-     2.5. String Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../02/List%20and%20Tuples.html">
-     2.6. List and Tuples
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Dictionaries%20and%20Comprehensions.html">
-   3. 3. Dictionaries and Comprehensions
+   3. Dictionaries and Comprehensions
   </a>
  </li>
  <li class="toctree-l1">
@@ -764,22 +915,10 @@
    5. 📃 Solution for Exercise 01
   </a>
  </li>
- <li class="toctree-l1 current active has-children active">
+ <li class="toctree-l1 current active active">
   <a class="current reference internal" href="#">
-   6. 4. Functions and Exceptions
+   6. Functions and Exceptions
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Exceptions.html">
-     6.4. Exceptions
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 <p class="caption">
@@ -797,8 +936,8 @@
   <a class="reference internal" href="../04/Pandas%20Intro.html">
    6. DataFrames in Python
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -829,8 +968,8 @@
   <a class="reference internal" href="../05/sql%20intro.html">
    7. Relational Databases and SQL
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -856,8 +995,8 @@
   <a class="reference internal" href="../06/viz%20intro.html">
    8. Data Visualization
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
