@@ -59,6 +59,7 @@ sphinx:
       repository_branch: main
       nb_repository_url: https://github.com/communitylab/data
       og_logo_url: https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png
+      persistent_sidebar: true
       launch_buttons:
         colab_url: https://colab.research.google.com
         binderhub_url: https://mybinder.org
