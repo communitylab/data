@@ -7,14 +7,10 @@ format: jb-book
 root: intro
 
 parts: 
-- caption: Programming using Python
-  numbered: false
+- caption: Programming with Python
+  numbered: true
   chapters:
-    - file: Chapters/01/Workflow_intro
-      sections:
-        - file: Chapters/01/workflow_1
-        - file: Chapters/01/workflow_2
-        - file: Chapters/01/workflow_3
+    - file: Chapters/01/intro_python
     - file: Chapters/02/Sequence, Loops and Methods
       sections:
         - file: Chapters/02/String Methods
