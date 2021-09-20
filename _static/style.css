@@ -31,12 +31,17 @@ background-color: #f7f7f7;
 }
 
 .page__header{
-margin: 0 0 2rem 0;
-border-bottom: 3px solid rgb(77 84 244 /70%)
+margin: 0 0 1.3rem 0;
+border-bottom: 3px solid rgb(77 84 244 /70%);
+padding: 0 0 0.6rem 0;
 }
 
 .page__footer{
-border-bottom: 3px solid rgb(77 84 244 /70%)
+Border-top: 3px solid rgb(77 84 244 /70%)
+}
+
+.main-index h1 {
+    border-bottom: 3px solid rgb(77 84 244 / 70%);
 }
 
 
