@@ -60,6 +60,11 @@ sphinx:
       nb_repository_url: https://github.com/communitylab/data
       og_logo_url: https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png
       persistent_sidebar: true
+      google_analytics_id: UA-207934828-1
+      TeX:
+        Macros:
+          "argmax" : "arg\\,max"
+          "argmin" : "arg\\,min"
       launch_buttons:
         colab_url: https://colab.research.google.com
         binderhub_url: https://mybinder.org
