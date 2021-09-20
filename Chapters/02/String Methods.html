@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.2. String Methods &#8212; Data Science with Python</title>
+    <title>2.5. String Methods &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,8 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2.3. List and Tuples" href="List%20and%20Tuples.html" />
-    <link rel="prev" title="2. 2. Sequence, Loops and Methods" href="Sequence%2C%20Loops%20and%20Methods.html" />
+    <link rel="next" title="2.6. List and Tuples" href="List%20and%20Tuples.html" />
+    <link rel="prev" title="2. Sequence, Loops and Methods" href="Sequence%2C%20Loops%20and%20Methods.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,29 +115,29 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#slicing">
-   2.2.1. Slicing
+   2.5.1. Slicing
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexing">
-     2.2.1.1. Indexing
+     2.5.1.1. Indexing
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   2.2.2. String Methods
+   2.5.2. String Methods
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-formatting">
-   2.2.3. String formatting
+   2.5.3. String formatting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#extra">
-   2.2.4. Extra
+   2.5.4. Extra
   </a>
  </li>
 </ul>
@@ -186,7 +186,7 @@
                     <div>
                         
   <div class="section" id="string-methods">
-<h1><span class="section-number">2.2. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2.5. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h1>
 <hr style="height:1px;border:none;color:#666;background-color:#666;" /><p>Python strings are just pieces of text. So far we looked at how to concatenate (add) them together.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -222,7 +222,7 @@ Python will treat that as <code class="docutils literal notranslate"><span class
 so it creates a new string but it puts it back to the same variable.</p>
 <p><code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code> are nice, but what else can we do with strings?</p>
 <div class="section" id="slicing">
-<h2><span class="section-number">2.2.1. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.1. </span>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h2>
 <p>Slicing is really simple. It just means getting a part of the string.
 For example, to get all characters between the second place between the
 characters and the fifth place between the characters, we can do this:</p>
@@ -242,7 +242,7 @@ characters and the fifth place between the characters, we can do this:</p>
 <p>This picture explains how the slicing works:</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/slicing1.png"><img alt="Slicing with non-negative values." src="../../_images/slicing1.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Slicing strings</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Slicing strings</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>But what happens if we slice with negative values?</p>
 <div class="cell docutils container">
@@ -261,7 +261,7 @@ characters and the fifth place between the characters, we can do this:</p>
 from the end of the string.</p>
 <div class="figure align-default" id="slicing-strings">
 <a class="reference internal image-reference" href="../../_images/slicing2.png"><img alt="Slicing with negative values." src="../../_images/slicing2.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Slicing strings using negative values</span><a class="headerlink" href="#slicing-strings" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.6 </span><span class="caption-text">Slicing strings using negative values</span><a class="headerlink" href="#slicing-strings" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we don’t specify the beginning it defaults to 0, and if we don’t
 specify the end it defaults to the length of the string. For example, we
@@ -322,7 +322,7 @@ can get everything except the first or last character like this:</p>
 </div>
 </div>
 <div class="section" id="indexing">
-<h3><span class="section-number">2.2.1.1. </span>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.5.1.1. </span>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h3>
 <p>So now we know how slicing works. But what happens if we forget the <code class="docutils literal notranslate"><span class="pre">:</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -357,7 +357,7 @@ first character is <code class="docutils literal notranslate"><span class="pre">
 <p>So string indexes work like this:</p>
 <div class="figure align-default" id="indexing-strings">
 <a class="reference internal image-reference" href="../../_images/indexing1.png"><img alt="Indexing Strings." src="../../_images/indexing1.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">String Index</span><a class="headerlink" href="#indexing-strings" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 2.7 </span><span class="caption-text">String Index</span><a class="headerlink" href="#indexing-strings" title="Permalink to this image">¶</a></p>
 </div>
 <p>How about negative values?</p>
 <div class="cell docutils container">
@@ -386,7 +386,7 @@ thing as indexing with 0.</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h2><span class="section-number">2.2.2. </span>String Methods<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.2. </span>String Methods<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Python’s strings have many useful methods.
 <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#string-methods">The official documentation</a>
 covers them all, but I’m going to just show some of the most commonly
@@ -502,7 +502,7 @@ need a separate function that does these things like <code class="docutils liter
 </div>
 </div>
 <div class="section" id="string-formatting">
-<h2><span class="section-number">2.2.3. </span>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.3. </span>String formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h2>
 <p>To add a string in the middle of another string, we can do something
 like this:</p>
 <div class="cell docutils container">
@@ -540,7 +540,7 @@ like this:</p>
 </div>
 </div>
 <div class="section" id="extra">
-<h2><span class="section-number">2.2.4. </span>Extra<a class="headerlink" href="#extra" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.5.4. </span>Extra<a class="headerlink" href="#extra" title="Permalink to this headline">¶</a></h2>
 <p>We can use <code class="docutils literal notranslate"><span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> to check if a string contains another
 string.</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
@@ -631,7 +631,7 @@ string.</p>
  </li>
  <li class="toctree-l1 current active has-children active">
   <a class="reference internal" href="Sequence%2C%20Loops%20and%20Methods.html">
-   2. 2. Sequence, Loops and Methods
+   2. Sequence, Loops and Methods
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -641,12 +641,12 @@ string.</p>
   <ul class="current">
    <li class="toctree-l2 current active active">
     <a class="current reference internal" href="#">
-     2.2. String Methods
+     2.5. String Methods
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="List%20and%20Tuples.html">
-     2.3. List and Tuples
+     2.6. List and Tuples
     </a>
    </li>
   </ul>
