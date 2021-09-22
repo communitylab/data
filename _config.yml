@@ -75,6 +75,7 @@ sphinx:
     tojupyter_urlpath: "https://github.com/communitylab/data"
     tojupyter_image_urlpath: "https://github.com/communitylab/data"
     tojupyter_lang_synonyms: ["ipython", "ipython3", "python"]
+    navbar_footer_text: Visit our <a href="https://github.com/communitylab/data">repository</a>
     tojupyter_kernels:
       python3:
         kernelspec:
