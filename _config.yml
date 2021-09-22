@@ -60,6 +60,7 @@ sphinx:
       nb_repository_url: https://github.com/communitylab/data
       og_logo_url: https://raw.githubusercontent.com/Ashray-shetty/bookcopy/main/Multiverse_Logo_RGB_Indigo-02.png
       persistent_sidebar: true
+      navbar_footer_text: Visit our <a href="https://github.com/communitylab/data">repository</a>
       google_analytics_id: UA-207934828-1
       TeX:
         Macros:
@@ -70,20 +71,19 @@ sphinx:
         binderhub_url: https://mybinder.org
         thebe: True
 
-    tojupyter_static_file_path: ["source/_static", "_static"]
-    tojupyter_target_html: true
-    tojupyter_urlpath: "https://github.com/communitylab/data"
-    tojupyter_image_urlpath: "https://github.com/communitylab/data"
-    tojupyter_lang_synonyms: ["ipython", "ipython3", "python"]
-    navbar_footer_text: Visit our <a href="https://github.com/communitylab/data">repository</a>
-    tojupyter_kernels:
-      python3:
-        kernelspec:
-          display_name: "Python"
-          language: python3
-          name: python3
-        file_extension: ".py"
-    tojupyter_images_markdown: true
+      tojupyter_static_file_path: ["source/_static", "_static"]
+      tojupyter_target_html: true
+      tojupyter_urlpath: "https://github.com/communitylab/data"
+      tojupyter_image_urlpath: "https://github.com/communitylab/data"
+      tojupyter_lang_synonyms: ["ipython", "ipython3", "python"]
+      tojupyter_kernels:
+        python3:
+          kernelspec:
+            display_name: "Python"
+            language: python3
+            name: python3
+          file_extension: ".py"
+      tojupyter_images_markdown: true
 
 
 
