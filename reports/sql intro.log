@@ -1,19 +1,19 @@
 Traceback (most recent call last):
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/client.py", line 1117, in execute
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 1117, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/util.py", line 78, in wrapped
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 78, in wrapped
     return just_run(coro(*args, **kwargs))
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/util.py", line 57, in just_run
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/util.py", line 57, in just_run
     return loop.run_until_complete(coro)
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
     return future.result()
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/client.py", line 558, in async_execute
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 558, in async_execute
     await self.async_execute_cell(
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in async_execute_cell
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in async_execute_cell
     self._check_raise_for_error(cell, exec_reply)
-  File "/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
+  File "/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/nbclient/client.py", line 765, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
@@ -26,12 +26,12 @@ pd.read_sql(sql_expr, sqlite_engine)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mOperationalError[0m                          Traceback (most recent call last)
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
 [1;32m   1798[0m                 [0;32mif[0m [0;32mnot[0m [0mevt_handled[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 1799[0;31m                     self.dialect.do_execute(
 [0m[1;32m   1800[0m                         [0mcursor[0m[0;34m,[0m [0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m,[0m [0mcontext[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/default.py[0m in [0;36mdo_execute[0;34m(self, cursor, statement, parameters, context)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/default.py[0m in [0;36mdo_execute[0;34m(self, cursor, statement, parameters, context)[0m
 [1;32m    716[0m     [0;32mdef[0m [0mdo_execute[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mcursor[0m[0;34m,[0m [0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m,[0m [0mcontext[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 717[0;31m         [0mcursor[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    718[0m [0;34m[0m[0m
@@ -41,26 +41,26 @@ pd.read_sql(sql_expr, sqlite_engine)
 The above exception was the direct cause of the following exception:
 
 [0;31mOperationalError[0m                          Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2490/2270944330.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2304/2270944330.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      3[0m [0mFROM[0m [0mnames[0m [0mN[0m[0;34m,[0m [0mcolors[0m [0mC[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      4[0m """
 [0;32m----> 5[0;31m [0mpd[0m[0;34m.[0m[0mread_sql[0m[0;34m([0m[0msql_expr[0m[0;34m,[0m [0msqlite_engine[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mread_sql[0;34m(sql, con, index_col, coerce_float, params, parse_dates, columns, chunksize)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mread_sql[0;34m(sql, con, index_col, coerce_float, params, parse_dates, columns, chunksize)[0m
 [1;32m    626[0m         )
 [1;32m    627[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 628[0;31m         return pandas_sql.read_query(
 [0m[1;32m    629[0m             [0msql[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    630[0m             [0mindex_col[0m[0;34m=[0m[0mindex_col[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mread_query[0;34m(self, sql, index_col, coerce_float, parse_dates, params, chunksize, dtype)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mread_query[0;34m(self, sql, index_col, coerce_float, parse_dates, params, chunksize, dtype)[0m
 [1;32m   1577[0m         [0margs[0m [0;34m=[0m [0m_convert_params[0m[0;34m([0m[0msql[0m[0;34m,[0m [0mparams[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1578[0m [0;34m[0m[0m
 [0;32m-> 1579[0;31m         [0mresult[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   1580[0m         [0mcolumns[0m [0;34m=[0m [0mresult[0m[0;34m.[0m[0mkeys[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1581[0m [0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mexecute[0;34m(self, *args, **kwargs)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/pandas/io/sql.py[0m in [0;36mexecute[0;34m(self, *args, **kwargs)[0m
 [1;32m   1422[0m     [0;32mdef[0m [0mexecute[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1423[0m         [0;34m"""Simple passthrough to SQLAlchemy connectable"""[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 1424[0;31m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mconnectable[0m[0;34m.[0m[0mexecution_options[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
@@ -69,63 +69,63 @@ The above exception was the direct cause of the following exception:
 
 [0;32m<string>[0m in [0;36mexecute[0;34m(self, statement, *multiparams, **params)[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py[0m in [0;36mwarned[0;34m(fn, *args, **kwargs)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/util/deprecations.py[0m in [0;36mwarned[0;34m(fn, *args, **kwargs)[0m
 [1;32m    388[0m         [0;32mif[0m [0;32mnot[0m [0mskip_warning[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    389[0m             [0m_warn_with_version[0m[0;34m([0m[0mmessage[0m[0;34m,[0m [0mversion[0m[0;34m,[0m [0mwtype[0m[0;34m,[0m [0mstacklevel[0m[0;34m=[0m[0;36m3[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 390[0;31m         [0;32mreturn[0m [0mfn[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwargs[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    391[0m [0;34m[0m[0m
 [1;32m    392[0m     [0mdoc[0m [0;34m=[0m [0mfunc[0m[0;34m.[0m[0m__doc__[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m [0;32mand[0m [0mfunc[0m[0;34m.[0m[0m__doc__[0m [0;32mor[0m [0;34m""[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36mexecute[0;34m(self, statement, *multiparams, **params)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36mexecute[0;34m(self, statement, *multiparams, **params)[0m
 [1;32m   3134[0m         """
 [1;32m   3135[0m         [0mconnection[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mconnect[0m[0;34m([0m[0mclose_with_result[0m[0;34m=[0m[0;32mTrue[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 3136[0;31m         [0;32mreturn[0m [0mconnection[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0mstatement[0m[0;34m,[0m [0;34m*[0m[0mmultiparams[0m[0;34m,[0m [0;34m**[0m[0mparams[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m   3137[0m [0;34m[0m[0m
 [1;32m   3138[0m     @util.deprecated_20(
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36mexecute[0;34m(self, statement, *multiparams, **params)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36mexecute[0;34m(self, statement, *multiparams, **params)[0m
 [1;32m   1269[0m             )
 [1;32m   1270[0m [0;34m[0m[0m
 [0;32m-> 1271[0;31m             return self._exec_driver_sql(
 [0m[1;32m   1272[0m                 [0mstatement[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1273[0m                 [0mmultiparams[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_exec_driver_sql[0;34m(self, statement, multiparams, params, execution_options, future)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_exec_driver_sql[0;34m(self, statement, multiparams, params, execution_options, future)[0m
 [1;32m   1573[0m [0;34m[0m[0m
 [1;32m   1574[0m         [0mdialect[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mdialect[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 1575[0;31m         ret = self._execute_context(
 [0m[1;32m   1576[0m             [0mdialect[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1577[0m             [0mdialect[0m[0;34m.[0m[0mexecution_ctx_cls[0m[0;34m.[0m[0m_init_statement[0m[0;34m,[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
 [1;32m   1840[0m [0;34m[0m[0m
 [1;32m   1841[0m         [0;32mexcept[0m [0mBaseException[0m [0;32mas[0m [0me[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 1842[0;31m             self._handle_dbapi_exception(
 [0m[1;32m   1843[0m                 [0me[0m[0;34m,[0m [0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m,[0m [0mcursor[0m[0;34m,[0m [0mcontext[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1844[0m             )
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_handle_dbapi_exception[0;34m(self, e, statement, parameters, cursor, context)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_handle_dbapi_exception[0;34m(self, e, statement, parameters, cursor, context)[0m
 [1;32m   2021[0m                 [0mutil[0m[0;34m.[0m[0mraise_[0m[0;34m([0m[0mnewraise[0m[0;34m,[0m [0mwith_traceback[0m[0;34m=[0m[0mexc_info[0m[0;34m[[0m[0;36m2[0m[0;34m][0m[0;34m,[0m [0mfrom_[0m[0;34m=[0m[0me[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   2022[0m             [0;32melif[0m [0mshould_wrap[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 2023[0;31m                 util.raise_(
 [0m[1;32m   2024[0m                     [0msqlalchemy_exception[0m[0;34m,[0m [0mwith_traceback[0m[0;34m=[0m[0mexc_info[0m[0;34m[[0m[0;36m2[0m[0;34m][0m[0;34m,[0m [0mfrom_[0m[0;34m=[0m[0me[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   2025[0m                 )
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/util/compat.py[0m in [0;36mraise_[0;34m(***failed resolving arguments***)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/util/compat.py[0m in [0;36mraise_[0;34m(***failed resolving arguments***)[0m
 [1;32m    205[0m [0;34m[0m[0m
 [1;32m    206[0m         [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 207[0;31m             [0;32mraise[0m [0mexception[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m    208[0m         [0;32mfinally[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [1;32m    209[0m             [0;31m# credit to[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/base.py[0m in [0;36m_execute_context[0;34m(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)[0m
 [1;32m   1797[0m                             [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1798[0m                 [0;32mif[0m [0;32mnot[0m [0mevt_handled[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m-> 1799[0;31m                     self.dialect.do_execute(
 [0m[1;32m   1800[0m                         [0mcursor[0m[0;34m,[0m [0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m,[0m [0mcontext[0m[0;34m[0m[0;34m[0m[0m
 [1;32m   1801[0m                     )
 
-[0;32m/opt/hostedtoolcache/Python/3.8.11/x64/lib/python3.8/site-packages/sqlalchemy/engine/default.py[0m in [0;36mdo_execute[0;34m(self, cursor, statement, parameters, context)[0m
+[0;32m/opt/hostedtoolcache/Python/3.8.12/x64/lib/python3.8/site-packages/sqlalchemy/engine/default.py[0m in [0;36mdo_execute[0;34m(self, cursor, statement, parameters, context)[0m
 [1;32m    715[0m [0;34m[0m[0m
 [1;32m    716[0m     [0;32mdef[0m [0mdo_execute[0m[0;34m([0m[0mself[0m[0;34m,[0m [0mcursor[0m[0;34m,[0m [0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m,[0m [0mcontext[0m[0;34m=[0m[0;32mNone[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 [0;32m--> 717[0;31m         [0mcursor[0m[0;34m.[0m[0mexecute[0m[0;34m([0m[0mstatement[0m[0;34m,[0m [0mparameters[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
