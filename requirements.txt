@@ -8,6 +8,7 @@ sphinx-multitoc-numbering==0.1.3
 sphinx-prompt
 sphinx-tojupyter==0.1.2
 sphinxext-rediraffe==0.2.7
+sphinx-thebe
 sphinx-exercise==0.1.1
 jupytext==1.10
 jupinx==0.2.3
