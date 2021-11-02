@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Introduction to Numpy &#8212; Data Science with Python</title>
+    <title>Introduction to Numpy &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -66,8 +66,6 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="8. DataFrames in Python" href="Pandas%20Intro.html" />
-    <link rel="prev" title="6. Functions and Exceptions" href="../03/Functions%20and%20Exceptions.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -117,41 +115,41 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numpy-arrays">
-   7.1. NumPy Arrays
+   NumPy Arrays
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-arrays">
-     7.1.1. What are Arrays?
+     What are Arrays?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#python-lists-vs-numpy-arrays">
-     7.1.2. Python lists vs. numpy arrays
+     Python lists vs. numpy arrays
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-numpy-arrays">
-     7.1.3. Creating numpy arrays
+     Creating numpy arrays
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#numpy-indexing">
-   7.2. Numpy indexing
+   Numpy indexing
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#multidimensional-indexing">
-     7.2.1. Multidimensional indexing
+     Multidimensional indexing
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#methods-vs-functions">
-   7.3. Methods vs. functions
+   Methods vs. functions
   </a>
  </li>
 </ul>
@@ -200,7 +198,7 @@
                     <div>
                         
   <div class="section" id="introduction-to-numpy">
-<h1><span class="section-number">7. </span>Introduction to Numpy<a class="headerlink" href="#introduction-to-numpy" title="Permalink to this headline">¶</a></h1>
+<h1>Introduction to Numpy<a class="headerlink" href="#introduction-to-numpy" title="Permalink to this headline">¶</a></h1>
 <hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p><img alt="" src="../../_images/numpy.png" /></p>
 <p>NumPy stands for “Numerical Python” and it is the standard Python library used for working with arrays (i.e., vectors &amp; matrices), linear algerba, and other numerical computations. NumPy is written in C, making NumPy arrays faster and more memory efficient than Python lists or arrays, read more: (<a class="reference external" href="https://www.datadiscuss.com/proof-that-numpy-is-much-faster-than-normal-python-array/">link 1</a>, <a class="reference external" href="https://www.jessicayung.com/numpy-arrays-memory-and-strides/">link 2</a>, <a class="reference external" href="https://www.labri.fr/perso/nrougier/from-python-to-numpy/">link 3</a>).</p>
@@ -218,16 +216,16 @@
 </div>
 </div>
 <div class="section" id="numpy-arrays">
-<h2><span class="section-number">7.1. </span>NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h2>
+<h2>NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h2>
 <hr>
 <div class="section" id="what-are-arrays">
-<h3><span class="section-number">7.1.1. </span>What are Arrays?<a class="headerlink" href="#what-are-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>What are Arrays?<a class="headerlink" href="#what-are-arrays" title="Permalink to this headline">¶</a></h3>
 <p>Arrays are “n-dimensional” data structures that can contain all the basic Python data types, e.g., floats, integers, strings etc, but work best with numeric data. <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> (which stands for <em>n</em>-<em>d</em>imensional array) are homogenous, which means that items in the array should be of the same type. ndarrays are also compatible with numpy’s vast collection of in-built functions!</p>
 <p><img alt="" src="../../_images/numpy_arrays.png" /></p>
 <p>Source: <a class="reference external" href="https://medium.com/hackernoon/10-machine-learning-data-science-and-deep-learning-courses-for-programmers-7edc56078cde">Medium.com</a></p>
 </div>
 <div class="section" id="python-lists-vs-numpy-arrays">
-<h3><span class="section-number">7.1.2. </span>Python lists vs. numpy arrays<a class="headerlink" href="#python-lists-vs-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Python lists vs. numpy arrays<a class="headerlink" href="#python-lists-vs-numpy-arrays" title="Permalink to this headline">¶</a></h3>
 <p>Basically, numpy arrays are a lot like Python lists. The major difference, however, is that <em>numpy arrays may contain only a single data-type</em>, while Python lists may contain different data-types within the same list.</p>
 <p>Let check this out:</p>
 <div class="cell docutils container">
@@ -280,7 +278,7 @@ this is a: &lt;class &#39;numpy.float64&#39;&gt;
 <p>As you can see, Numpy converted our original list (to_convert_to_numpy), which contained both integers and floats, to an array with only floats! You might think that such a data structure that only allows one single data type is not ideal. However, the very fact that it only contains a single data-type makes operations on numpy arrays extremely fast. For example, loops over numpy arrays are often way faster than loops over python lists. This is because, internally, Python has to check the data-type of each loop entry before doing something with that entry. Because numpy arrays one allow a single data-type, it only has to check for the entries’ data type <strong>once</strong>. If you imagine looping over an array or list of length 100,000, you probably understand that the numpy loop is way faster.</p>
 </div>
 <div class="section" id="creating-numpy-arrays">
-<h3><span class="section-number">7.1.3. </span>Creating numpy arrays<a class="headerlink" href="#creating-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Creating numpy arrays<a class="headerlink" href="#creating-numpy-arrays" title="Permalink to this headline">¶</a></h3>
 <p>As shown an earlier example, numpy arrays can be created as follows:</p>
 <ol class="simple">
 <li><p>Define a Python list, e.g. <code class="docutils literal notranslate"><span class="pre">my_list</span> <span class="pre">=</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code></p></li>
@@ -415,16 +413,16 @@ Filled array
  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]
  [1. 1. 1. 1. 1. 1. 1. 1. 1. 1.]] 
 
-[[0.54347812 0.73201986 0.6884007  0.22052144 0.51237655 0.1180309
-  0.21123597 0.11656312 0.32164504 0.21572643]
- [0.47053907 0.9618215  0.41090051 0.02005318 0.51060522 0.06765683
-  0.78972013 0.92658506 0.5818003  0.24192446]
- [0.37488451 0.93463889 0.60018181 0.20767666 0.01681146 0.91640983
-  0.96167938 0.19655249 0.5223081  0.73225337]
- [0.79680782 0.27629063 0.509157   0.41769751 0.26616699 0.93390551
-  0.20827585 0.63130726 0.64058035 0.24824089]
- [0.7278016  0.40789602 0.2456695  0.02735456 0.33598368 0.33599275
-  0.29836316 0.06425599 0.44622244 0.61417453]]
+[[0.89280802 0.71528194 0.79502251 0.79416069 0.24085348 0.34545028
+  0.16616325 0.0395643  0.83132937 0.15782763]
+ [0.0610464  0.83777077 0.42867287 0.48689984 0.85284606 0.41653439
+  0.76413852 0.77757598 0.16425489 0.08807865]
+ [0.98031968 0.54430636 0.97859154 0.60069565 0.31547191 0.91884454
+  0.3950094  0.19179799 0.46824836 0.11130536]
+ [0.17620952 0.04791577 0.62004599 0.38952277 0.56568549 0.99621364
+  0.32068722 0.49963971 0.5174277  0.95901683]
+ [0.44067769 0.07322269 0.14749265 0.92722556 0.8761801  0.46933256
+  0.5535451  0.75224488 0.7260537  0.88667268]]
 </pre></div>
 </div>
 </div>
@@ -432,7 +430,7 @@ Filled array
 </div>
 </div>
 <div class="section" id="numpy-indexing">
-<h2><span class="section-number">7.2. </span>Numpy indexing<a class="headerlink" href="#numpy-indexing" title="Permalink to this headline">¶</a></h2>
+<h2>Numpy indexing<a class="headerlink" href="#numpy-indexing" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Indexing (extracting a single value of an array) and slicing (extracting multiple values - a subset - from an array) of numpy arrays is largely the same as with regular Python lists. Let’s check out a couple of examples of a 1D array:</p>
 <div class="cell docutils container">
@@ -526,7 +524,7 @@ Filled array
 </div>
 </div>
 <div class="section" id="multidimensional-indexing">
-<h3><span class="section-number">7.2.1. </span>Multidimensional indexing<a class="headerlink" href="#multidimensional-indexing" title="Permalink to this headline">¶</a></h3>
+<h3>Multidimensional indexing<a class="headerlink" href="#multidimensional-indexing" title="Permalink to this headline">¶</a></h3>
 <p>Often, instead of working on and indexing 1D array, we’ll work with multi-dimensional (&gt;1D) arrays. Indexing multi-dimensional arrays is, again, quite similar to indexing and slicing list.</p>
 <p>Like indexing Python lists, indexing multidimensional numpy arrays is done with square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, in which you can put as many comma-delimited numbers as there are dimensions in your array.</p>
 <p>For example, suppose you have a 2D array of shape <span class="math notranslate nohighlight">\(3 \times 3\)</span> and you want to index the value in the first row and first column. You would do this as follows:</p>
@@ -584,7 +582,7 @@ First column
 </div>
 </div>
 <div class="section" id="methods-vs-functions">
-<h2><span class="section-number">7.3. </span>Methods vs. functions<a class="headerlink" href="#methods-vs-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Methods vs. functions<a class="headerlink" href="#methods-vs-functions" title="Permalink to this headline">¶</a></h2>
 <hr>
 In the previous tutorials, we learned that, in addition to functions, 'methods' exist that are like functions of an object. We've seen examples of list methods, e.g. `my_list.append(1)`, and string methods, e.g. `my_string.replace('a', 'b')`.
 <p>Like lists and strings, numpy arrays have a lot of convenient methods that you can call (like the <code class="docutils literal notranslate"><span class="pre">astype</span></code> method). Again, this is just like a function, but then applied to itself. Often, numpy provides both a function and method for simple operations.</p>
@@ -676,19 +674,19 @@ This argument may be named or unnamed - doesn’t matter. An example:</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original array:
-[[0.64866478 0.8823165  0.91920509]
- [0.58505498 0.21709775 0.12425399]
- [0.08060775 0.96342611 0.52639566]] 
+[[0.3646015  0.152142   0.27231893]
+ [0.34968322 0.90399448 0.64014192]
+ [0.25022036 0.45336352 0.67256599]] 
 
 Use the round() method with the argument 3:
-[[0.649 0.882 0.919]
- [0.585 0.217 0.124]
- [0.081 0.963 0.526]] 
+[[0.365 0.152 0.272]
+ [0.35  0.904 0.64 ]
+ [0.25  0.453 0.673]] 
 
 Use the round() method with the named argument 5:
-[[0.64866 0.88232 0.91921]
- [0.58505 0.2171  0.12425]
- [0.08061 0.96343 0.5264 ]] 
+[[0.3646  0.15214 0.27232]
+ [0.34968 0.90399 0.64014]
+ [0.25022 0.45336 0.67257]] 
 </pre></div>
 </div>
 </div>
@@ -816,48 +814,6 @@ Shape after ravel(): (10,)
  <li class="toctree-l1">
   <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
    6. Functions and Exceptions
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Wrangling with Python
- </span>
-</p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1 current active active">
-  <a class="current reference internal" href="#">
-   7. Introduction to Numpy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20Intro.html">
-   8. DataFrames in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
-   9. Grouping and Pivoting
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Merge%20and%20Concat%20Dataset.html">
-   10. Working with Multiple DataFrames
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
-   11. Applying Functions and Plotting in Pandas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   12. Relational Databases and SQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   13. Data Visualization
   </a>
  </li>
 </ul>

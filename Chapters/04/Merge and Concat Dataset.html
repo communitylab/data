@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>10. Working with Multiple DataFrames &#8212; Data Science with Python</title>
+    <title>Working with Multiple DataFrames &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,6 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11. Applying Functions and Plotting in Pandas" href="Pandas%20apply%20strings%20and%20plotting.html" />
-    <link rel="prev" title="9. Grouping and Pivoting" href="Pandas%20grouping%20and%20pivoting.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,7 +113,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sticking-dataframes-together-with-pd-concat">
-   10.1. Sticking DataFrames Together with
+   Sticking DataFrames Together with
    <code class="docutils literal notranslate">
     <span class="pre">
      pd.concat()
@@ -125,7 +123,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#joining-dataframes-with-pd-merge">
-   10.2. Joining DataFrames with
+   Joining DataFrames with
    <code class="docutils literal notranslate">
     <span class="pre">
      pd.merge()
@@ -179,7 +177,7 @@
                     <div>
                         
   <div class="section" id="working-with-multiple-dataframes">
-<h1><span class="section-number">10. </span>Working with Multiple DataFrames<a class="headerlink" href="#working-with-multiple-dataframes" title="Permalink to this headline">¶</a></h1>
+<h1>Working with Multiple DataFrames<a class="headerlink" href="#working-with-multiple-dataframes" title="Permalink to this headline">¶</a></h1>
 <hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p>Often you’ll work with multiple dataframes that you want to stick together or merge. <code class="docutils literal notranslate"><span class="pre">df.merge()</span></code> and <code class="docutils literal notranslate"><span class="pre">df.concat()</span></code> are all you need to know for combining dataframes. The Pandas <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html">documentation</a> is very helpful for these functions, but they are pretty easy to grasp.</p>
 <div class="admonition note">
@@ -187,7 +185,7 @@
 <p>The example joins shown in this section are inspired by <a class="reference external" href="https://stat545.com/join-cheatsheet.html">Chapter 15</a> of Jenny Bryan’s STAT 545 materials.</p>
 </div>
 <div class="section" id="sticking-dataframes-together-with-pd-concat">
-<h2><span class="section-number">10.1. </span>Sticking DataFrames Together with <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code><a class="headerlink" href="#sticking-dataframes-together-with-pd-concat" title="Permalink to this headline">¶</a></h2>
+<h2>Sticking DataFrames Together with <code class="docutils literal notranslate"><span class="pre">pd.concat()</span></code><a class="headerlink" href="#sticking-dataframes-together-with-pd-concat" title="Permalink to this headline">¶</a></h2>
 <hr>
 You can use `pd.concat()` to stick dataframes together:
 - Vertically: if they have the same **columns**, OR
@@ -585,7 +583,7 @@ You can use `pd.concat()` to stick dataframes together:
 </div>
 </div>
 <div class="section" id="joining-dataframes-with-pd-merge">
-<h2><span class="section-number">10.2. </span>Joining DataFrames with <code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code><a class="headerlink" href="#joining-dataframes-with-pd-merge" title="Permalink to this headline">¶</a></h2>
+<h2>Joining DataFrames with <code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code><a class="headerlink" href="#joining-dataframes-with-pd-merge" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">pd.merge()</span></code> gives you the ability to “join” dataframes using different rules (just like with SQL if you’re familiar with it). You can use <code class="docutils literal notranslate"><span class="pre">df.merge()</span></code> to join dataframes based on shared <code class="docutils literal notranslate"><span class="pre">key</span></code> columns. Methods include:</p>
 <ul class="simple">
@@ -1267,48 +1265,6 @@ You can use `pd.concat()` to stick dataframes together:
  <li class="toctree-l1">
   <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
    6. Functions and Exceptions
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Wrangling with Python
- </span>
-</p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="NumPy.html">
-   7. Introduction to Numpy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20Intro.html">
-   8. DataFrames in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
-   9. Grouping and Pivoting
-  </a>
- </li>
- <li class="toctree-l1 current active active">
-  <a class="current reference internal" href="#">
-   10. Working with Multiple DataFrames
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
-   11. Applying Functions and Plotting in Pandas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   12. Relational Databases and SQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   13. Data Visualization
   </a>
  </li>
 </ul>

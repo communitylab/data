@@ -22,7 +22,7 @@ favorite_pets['Dr. House']
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2486/959090609.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2423/959090609.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mfavorite_pets[0m[0;34m[[0m[0;34m'Dr. House'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mKeyError[0m: 'Dr. House'

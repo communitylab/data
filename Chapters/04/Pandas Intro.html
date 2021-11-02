@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. DataFrames in Python &#8212; Data Science with Python</title>
+    <title>DataFrames in Python &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,6 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="9. Grouping and Pivoting" href="Pandas%20grouping%20and%20pivoting.html" />
-    <link rel="prev" title="7. Introduction to Numpy" href="NumPy.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,59 +113,59 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chapter-learning-objectives">
-   8.1. Chapter Learning Objectives
+   Chapter Learning Objectives
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduction-to-pandas">
-   8.2. Introduction to Pandas
+   Introduction to Pandas
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pandas-series">
-     8.2.1. Pandas Series
+     Pandas Series
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-series">
-     8.2.2. What are Series?
+     What are Series?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-series">
-     8.2.3. Creating Series
+     Creating Series
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#series-characteristics">
-     8.2.4. Series Characteristics
+     Series Characteristics
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pandas-dataframes">
-   8.3. Pandas DataFrames
+   Pandas DataFrames
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#what-are-dataframes">
-     8.3.1. What are DataFrames?
+     What are DataFrames?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#creating-dataframes">
-     8.3.2. Creating DataFrames
+     Creating DataFrames
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexing-and-slicing-dataframes">
-     8.3.3. Indexing and Slicing DataFrames
+     Indexing and Slicing DataFrames
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#indexing-with">
-       8.3.3.1. Indexing with
+       Indexing with
        <code class="docutils literal notranslate">
         <span class="pre">
          []
@@ -177,7 +175,7 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#indexing-with-loc-and-iloc">
-       8.3.3.2. Indexing with
+       Indexing with
        <code class="docutils literal notranslate">
         <span class="pre">
          .loc
@@ -193,12 +191,12 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#boolean-indexing">
-       8.3.3.3. Boolean indexing
+       Boolean indexing
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#indexing-with-query">
-       8.3.3.4. Indexing with
+       Indexing with
        <code class="docutils literal notranslate">
         <span class="pre">
          .query()
@@ -212,17 +210,17 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-writing-data-from-external-sources">
-   8.4. Reading/Writing Data From External Sources
+   Reading/Writing Data From External Sources
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#csv-files">
-     8.4.1. .csv files
+     .csv files
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#slicing-using-loc">
-     8.4.2. Slicing using
+     Slicing using
      <code class="docutils literal notranslate">
       <span class="pre">
        .loc
@@ -232,14 +230,14 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#common-dataframe-operations">
-     8.4.3. Common DataFrame Operations
+     Common DataFrame Operations
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   8.5. Summary
+   Summary
   </a>
  </li>
 </ul>
@@ -288,7 +286,7 @@
                     <div>
                         
   <div class="section" id="dataframes-in-python">
-<h1><span class="section-number">8. </span>DataFrames in Python<a class="headerlink" href="#dataframes-in-python" title="Permalink to this headline">¶</a></h1>
+<h1>DataFrames in Python<a class="headerlink" href="#dataframes-in-python" title="Permalink to this headline">¶</a></h1>
 <hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p>Much of data anlysis involves working with data contained in rectangular form in tables or csv files. In python we call these data tables as <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code>, they are one of the most common and useful forms of data for analysis. We introduce data manipulation using <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, the standard Python library for working with dataframes.</p>
 <p>It is more important that you understand the types of useful operations on data than the exact details of <code class="docutils literal notranslate"><span class="pre">pandas</span></code> syntax. For example, knowing when to perform a group-by is generally more useful than knowing how to call the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> function to group data.</p>
@@ -296,7 +294,7 @@
 when you conduct your own data analyses.</p>
 <p>We begin by talking about the types of dataset structures that <code class="docutils literal notranslate"><span class="pre">pandas</span></code> can read. Then, we introduce indexes, grouping, apply, and strings.</p>
 <div class="section" id="chapter-learning-objectives">
-<h2><span class="section-number">8.1. </span>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
+<h2>Chapter Learning Objectives<a class="headerlink" href="#chapter-learning-objectives" title="Permalink to this headline">¶</a></h2>
 <hr>
 <ul class="simple">
 <li><p>Create Pandas series with <code class="docutils literal notranslate"><span class="pre">pd.Series()</span></code> and Pandas dataframe with <code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code></p></li>
@@ -307,7 +305,7 @@ when you conduct your own data analyses.</p>
 </ul>
 </div>
 <div class="section" id="introduction-to-pandas">
-<h2><span class="section-number">8.2. </span>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Pandas is most popular Python library for tabular data structures. You can think of Pandas as an extremely powerful version of Excel (but free and with a lot more features!)</p>
 <p>Pandas can be installed using <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
@@ -323,16 +321,16 @@ when you conduct your own data analyses.</p>
 </div>
 </div>
 <div class="section" id="pandas-series">
-<h3><span class="section-number">8.2.1. </span>Pandas Series<a class="headerlink" href="#pandas-series" title="Permalink to this headline">¶</a></h3>
+<h3>Pandas Series<a class="headerlink" href="#pandas-series" title="Permalink to this headline">¶</a></h3>
 <hr>
 </div>
 <div class="section" id="what-are-series">
-<h3><span class="section-number">8.2.2. </span>What are Series?<a class="headerlink" href="#what-are-series" title="Permalink to this headline">¶</a></h3>
+<h3>What are Series?<a class="headerlink" href="#what-are-series" title="Permalink to this headline">¶</a></h3>
 <p>A Series is like an list/array but with labels. They are strictly 1-dimensional and can contain any data type (integers, strings, floats, objects, etc), including a mix of them. Series can be created from a scalar, a list, ndarray or dictionary using <code class="docutils literal notranslate"><span class="pre">pd.Series()</span></code> (<strong>note the captial “S”</strong>). Here are some example series:</p>
 <p><img alt="" src="../../_images/series.png" /></p>
 </div>
 <div class="section" id="creating-series">
-<h3><span class="section-number">8.2.3. </span>Creating Series<a class="headerlink" href="#creating-series" title="Permalink to this headline">¶</a></h3>
+<h3>Creating Series<a class="headerlink" href="#creating-series" title="Permalink to this headline">¶</a></h3>
 <p>By default, series are labelled with indices starting from 0. For example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -388,7 +386,7 @@ dtype: int64
 </div>
 </div>
 <div class="section" id="series-characteristics">
-<h3><span class="section-number">8.2.4. </span>Series Characteristics<a class="headerlink" href="#series-characteristics" title="Permalink to this headline">¶</a></h3>
+<h3>Series Characteristics<a class="headerlink" href="#series-characteristics" title="Permalink to this headline">¶</a></h3>
 <p>Series can be given a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute. I almost never use this but it might come up sometimes:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -453,15 +451,15 @@ Name: another_name, dtype: int64
 </div>
 </div>
 <div class="section" id="pandas-dataframes">
-<h2><span class="section-number">8.3. </span>Pandas DataFrames<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">¶</a></h2>
+<h2>Pandas DataFrames<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">¶</a></h2>
 <hr>
 <div class="section" id="what-are-dataframes">
-<h3><span class="section-number">8.3.1. </span>What are DataFrames?<a class="headerlink" href="#what-are-dataframes" title="Permalink to this headline">¶</a></h3>
+<h3>What are DataFrames?<a class="headerlink" href="#what-are-dataframes" title="Permalink to this headline">¶</a></h3>
 <p>Pandas DataFrames are you’re new best friend. They are like the Excel spreadsheets you may be used to. DataFrames are really just Series stuck together! Think of a DataFrame as a dictionary of series, with the “keys” being the column labels and the “values” being the series data:</p>
 <p><img alt="" src="../../_images/dataframe.png" /></p>
 </div>
 <div class="section" id="creating-dataframes">
-<h3><span class="section-number">8.3.2. </span>Creating DataFrames<a class="headerlink" href="#creating-dataframes" title="Permalink to this headline">¶</a></h3>
+<h3>Creating DataFrames<a class="headerlink" href="#creating-dataframes" title="Permalink to this headline">¶</a></h3>
 <p>Dataframes can be created using <code class="docutils literal notranslate"><span class="pre">pd.DataFrame()</span></code> (note the capital “D” and “F”). Like series, index and column labels of dataframes are labelled starting from 0 by default:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -655,7 +653,7 @@ Name: another_name, dtype: int64
 </table>
 </div>
 <div class="section" id="indexing-and-slicing-dataframes">
-<h3><span class="section-number">8.3.3. </span>Indexing and Slicing DataFrames<a class="headerlink" href="#indexing-and-slicing-dataframes" title="Permalink to this headline">¶</a></h3>
+<h3>Indexing and Slicing DataFrames<a class="headerlink" href="#indexing-and-slicing-dataframes" title="Permalink to this headline">¶</a></h3>
 <p>There are several main ways to select data from a DataFrame:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">[]</span></code></p></li>
@@ -721,7 +719,7 @@ Name: another_name, dtype: int64
 </div></div></div>
 </div>
 <div class="section" id="indexing-with">
-<h4><span class="section-number">8.3.3.1. </span>Indexing with <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#indexing-with" title="Permalink to this headline">¶</a></h4>
+<h4>Indexing with <code class="docutils literal notranslate"><span class="pre">[]</span></code><a class="headerlink" href="#indexing-with" title="Permalink to this headline">¶</a></h4>
 <p>Select columns by single labels, lists of labels, or slices:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -972,7 +970,7 @@ Name: Name, dtype: object
 </div>
 </div>
 <div class="section" id="indexing-with-loc-and-iloc">
-<h4><span class="section-number">8.3.3.2. </span>Indexing with <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code><a class="headerlink" href="#indexing-with-loc-and-iloc" title="Permalink to this headline">¶</a></h4>
+<h4>Indexing with <code class="docutils literal notranslate"><span class="pre">.loc</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc</span></code><a class="headerlink" href="#indexing-with-loc-and-iloc" title="Permalink to this headline">¶</a></h4>
 <p>Pandas created the methods <code class="docutils literal notranslate"><span class="pre">.loc[]</span></code> and <code class="docutils literal notranslate"><span class="pre">.iloc[]</span></code> as more flexible alternatives for accessing data from a dataframe. Use <code class="docutils literal notranslate"><span class="pre">df.iloc[]</span></code> for indexing with integers and <code class="docutils literal notranslate"><span class="pre">df.loc[]</span></code> for indexing with labels. These are typically the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#ix-indexer-is-deprecated">recommended methods of indexing</a> in Pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1303,7 +1301,7 @@ Name: Name, dtype: object
 </div>
 </div>
 <div class="section" id="boolean-indexing">
-<h4><span class="section-number">8.3.3.3. </span>Boolean indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this headline">¶</a></h4>
+<h4>Boolean indexing<a class="headerlink" href="#boolean-indexing" title="Permalink to this headline">¶</a></h4>
 <p>Just like with series, we can select data based on boolean masks:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1395,7 +1393,7 @@ Name: Name, dtype: object
 </div>
 </div>
 <div class="section" id="indexing-with-query">
-<h4><span class="section-number">8.3.3.4. </span>Indexing with <code class="docutils literal notranslate"><span class="pre">.query()</span></code><a class="headerlink" href="#indexing-with-query" title="Permalink to this headline">¶</a></h4>
+<h4>Indexing with <code class="docutils literal notranslate"><span class="pre">.query()</span></code><a class="headerlink" href="#indexing-with-query" title="Permalink to this headline">¶</a></h4>
 <p>Boolean masks work fine, but we can also use the <code class="docutils literal notranslate"><span class="pre">.query()</span></code> method for selecting data. <code class="docutils literal notranslate"><span class="pre">df.query()</span></code> is a powerful tool for filtering data. It has an odd syntax, it is more like SQL - <code class="docutils literal notranslate"><span class="pre">df.query()</span></code> accepts a string expression to evaluate and it “knows” the names of the columns in your dataframe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1533,10 +1531,10 @@ Name: Name, dtype: object
 </div>
 </div>
 <div class="section" id="reading-writing-data-from-external-sources">
-<h2><span class="section-number">8.4. </span>Reading/Writing Data From External Sources<a class="headerlink" href="#reading-writing-data-from-external-sources" title="Permalink to this headline">¶</a></h2>
+<h2>Reading/Writing Data From External Sources<a class="headerlink" href="#reading-writing-data-from-external-sources" title="Permalink to this headline">¶</a></h2>
 <hr>
 <div class="section" id="csv-files">
-<h3><span class="section-number">8.4.1. </span>.csv files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h3>
+<h3>.csv files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h3>
 <p>A lot of the time we will be loading .csv files for use in pandas. We can use the <code class="docutils literal notranslate"><span class="pre">pd.read_csv()</span></code> function for this. In the remaining sections of this chapter we will work with the Baby Names dataset. There are so many arguments that can be used to help read in your .csv file in an efficient and appropriate manner, feel free to check them out now (by using <code class="docutils literal notranslate"><span class="pre">shift</span> <span class="pre">+</span> <span class="pre">tab</span></code> in Jupyter, or typing <code class="docutils literal notranslate"><span class="pre">help(pd.read_csv)</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1657,7 +1655,7 @@ Name: Name, dtype: object
 <p>You can print a dataframe to .csv using <code class="docutils literal notranslate"><span class="pre">df.to_csv()</span></code>. Be sure to check out all of the possible arguments to write your dataframe exactly how you want it.</p>
 </div>
 <div class="section" id="slicing-using-loc">
-<h3><span class="section-number">8.4.2. </span>Slicing using <code class="docutils literal notranslate"><span class="pre">.loc</span></code><a class="headerlink" href="#slicing-using-loc" title="Permalink to this headline">¶</a></h3>
+<h3>Slicing using <code class="docutils literal notranslate"><span class="pre">.loc</span></code><a class="headerlink" href="#slicing-using-loc" title="Permalink to this headline">¶</a></h3>
 <p>To select subsets of a DataFrame, we use the <code class="docutils literal notranslate"><span class="pre">.loc</span></code> slicing syntax. The first argument is the label of the row and the second is the label of the column:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1856,7 +1854,7 @@ Name: Year, Length: 1891894, dtype: int64
 </div>
 </div>
 <div class="section" id="common-dataframe-operations">
-<h3><span class="section-number">8.4.3. </span>Common DataFrame Operations<a class="headerlink" href="#common-dataframe-operations" title="Permalink to this headline">¶</a></h3>
+<h3>Common DataFrame Operations<a class="headerlink" href="#common-dataframe-operations" title="Permalink to this headline">¶</a></h3>
 <p>DataFrames have built-in functions for performing most common operations, e.g., <code class="docutils literal notranslate"><span class="pre">.min()</span></code>, <code class="docutils literal notranslate"><span class="pre">idxmin()</span></code>, <code class="docutils literal notranslate"><span class="pre">sort_values()</span></code>, etc. They’re all documented in the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">Pandas documentation here</a> but I’ll demonstrate a few below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2239,7 +2237,7 @@ memory usage: 57.7+ MB
 </div>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">8.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>We now have learned to express the following operations in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>:</p>
 <table class="colwidths-auto table">
@@ -2349,48 +2347,6 @@ memory usage: 57.7+ MB
  <li class="toctree-l1">
   <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
    6. Functions and Exceptions
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Wrangling with Python
- </span>
-</p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="NumPy.html">
-   7. Introduction to Numpy
-  </a>
- </li>
- <li class="toctree-l1 current active active">
-  <a class="current reference internal" href="#">
-   8. DataFrames in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
-   9. Grouping and Pivoting
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Merge%20and%20Concat%20Dataset.html">
-   10. Working with Multiple DataFrames
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
-   11. Applying Functions and Plotting in Pandas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   12. Relational Databases and SQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   13. Data Visualization
   </a>
  </li>
 </ul>

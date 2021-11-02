@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11. Applying Functions and Plotting in Pandas &#8212; Data Science with Python</title>
+    <title>Applying Functions and Plotting in Pandas &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,6 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="12. Relational Databases and SQL" href="../05/sql%20intro.html" />
-    <link rel="prev" title="10. Working with Multiple DataFrames" href="Merge%20and%20Concat%20Dataset.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,27 +113,27 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#apply">
-   11.1. Apply
+   Apply
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-manipulation">
-   11.2. String Manipulation
+   String Manipulation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grouping">
-   11.3. Grouping
+   Grouping
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting">
-   11.4. Plotting
+   Plotting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   11.5. Summary
+   Summary
   </a>
  </li>
 </ul>
@@ -184,7 +182,7 @@
                     <div>
                         
   <div class="section" id="applying-functions-and-plotting-in-pandas">
-<h1><span class="section-number">11. </span>Applying Functions and Plotting in Pandas<a class="headerlink" href="#applying-functions-and-plotting-in-pandas" title="Permalink to this headline">¶</a></h1>
+<h1>Applying Functions and Plotting in Pandas<a class="headerlink" href="#applying-functions-and-plotting-in-pandas" title="Permalink to this headline">¶</a></h1>
 <hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p>In this section, we will answer the question:</p>
 <p><strong>Can we use the last letter of a name to predict the sex of the baby?</strong></p>
@@ -271,7 +269,7 @@
 <li><p>Plot the counts for each sex and letter.</p></li>
 </ol>
 <div class="section" id="apply">
-<h2><span class="section-number">11.1. </span>Apply<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h2>
+<h2>Apply<a class="headerlink" href="#apply" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> Series contain an <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> method that takes in a function and applies it to each value in the Series.</p>
 <div class="cell docutils container">
@@ -327,7 +325,7 @@ Name: Name, Length: 1891894, dtype: object
 </div>
 </div>
 <div class="section" id="string-manipulation">
-<h2><span class="section-number">11.2. </span>String Manipulation<a class="headerlink" href="#string-manipulation" title="Permalink to this headline">¶</a></h2>
+<h2>String Manipulation<a class="headerlink" href="#string-manipulation" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Although <code class="docutils literal notranslate"><span class="pre">.apply()</span></code> is flexible, it is often faster to use the built-in string manipulation functions in <code class="docutils literal notranslate"><span class="pre">pandas</span></code> when dealing with text data.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> provides access to string manipulation functions using the <code class="docutils literal notranslate"><span class="pre">.str</span></code> attribute of Series.</p>
@@ -510,7 +508,7 @@ Name: Name, Length: 1891894, dtype: object
 </div>
 </div>
 <div class="section" id="grouping">
-<h2><span class="section-number">11.3. </span>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
+<h2>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>To compute the sex distribution for each last letter, we need to group by both Last and Sex.</p>
 <div class="cell docutils container">
@@ -655,7 +653,7 @@ Name: Name, Length: 1891894, dtype: object
 </div>
 </div>
 <div class="section" id="plotting">
-<h2><span class="section-number">11.4. </span>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
+<h2>Plotting<a class="headerlink" href="#plotting" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> provides built-in plotting functionality for most basic plots, including bar charts, histograms, line charts, and scatterplots. To make a plot from a DataFrame, use the <code class="docutils literal notranslate"><span class="pre">.plot</span></code> attribute:</p>
 <div class="cell docutils container">
@@ -854,7 +852,7 @@ Name: Name, Length: 1891894, dtype: object
 </div>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">11.5. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>We can see that almost all first names that end in ‘p’ are male and names that end in ‘a’ are female! In general, the difference between bar lengths for many letters implies that we can often make a good guess to a person’s sex if we just know the last letter of their first name.</p>
 <p>We’ve learned to express the following operations in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>:</p>
@@ -962,48 +960,6 @@ Name: Name, Length: 1891894, dtype: object
  <li class="toctree-l1">
   <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
    6. Functions and Exceptions
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Wrangling with Python
- </span>
-</p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="NumPy.html">
-   7. Introduction to Numpy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20Intro.html">
-   8. DataFrames in Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20grouping%20and%20pivoting.html">
-   9. Grouping and Pivoting
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Merge%20and%20Concat%20Dataset.html">
-   10. Working with Multiple DataFrames
-  </a>
- </li>
- <li class="toctree-l1 current active active">
-  <a class="current reference internal" href="#">
-   11. Applying Functions and Plotting in Pandas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   12. Relational Databases and SQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   13. Data Visualization
   </a>
  </li>
 </ul>

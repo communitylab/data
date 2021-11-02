@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Grouping and Pivoting &#8212; Data Science with Python</title>
+    <title>Grouping and Pivoting &#8212; Data Science with Python</title>
     <script src="https://unpkg.com/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/tippy.js@6.3.1/dist/tippy-bundle.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -64,8 +64,6 @@
     <link rel="shortcut icon" href="../../_static/mvlogo.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="10. Working with Multiple DataFrames" href="Merge%20and%20Concat%20Dataset.html" />
-    <link rel="prev" title="8. DataFrames in Python" href="Pandas%20Intro.html" />
 
 <!-- Normal Meta Tags -->
 <meta name="author" context="" />
@@ -115,22 +113,22 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grouping">
-   9.1. Grouping
+   Grouping
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#grouping-on-multiple-columns">
-   9.2. Grouping on Multiple Columns
+   Grouping on Multiple Columns
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pivoting">
-   9.3. Pivoting
+   Pivoting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   9.4. Summary
+   Summary
   </a>
  </li>
 </ul>
@@ -179,7 +177,7 @@
                     <div>
                         
   <div class="section" id="grouping-and-pivoting">
-<h1><span class="section-number">9. </span>Grouping and Pivoting<a class="headerlink" href="#grouping-and-pivoting" title="Permalink to this headline">¶</a></h1>
+<h1>Grouping and Pivoting<a class="headerlink" href="#grouping-and-pivoting" title="Permalink to this headline">¶</a></h1>
 <hr style="height:0.6px;border:none;color:#666;background-color:#666;" />
 <p>In this section, we will answer the question:</p>
 <p><strong>What were the most popular male and female names in each year?</strong></p>
@@ -275,7 +273,7 @@
 <p>There is almost always a better alternative to looping over a <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrame. In particular, looping over unique values of a DataFrame should usually be replaced with a group.</p>
 </div>
 <div class="section" id="grouping">
-<h2><span class="section-number">9.1. </span>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
+<h2>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>To group in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. we use the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> method.</p>
 <div class="cell docutils container">
@@ -285,7 +283,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f3170640550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7f7805f18850&gt;
 </pre></div>
 </div>
 </div>
@@ -777,7 +775,7 @@
 </div>
 </div>
 <div class="section" id="grouping-on-multiple-columns">
-<h2><span class="section-number">9.2. </span>Grouping on Multiple Columns<a class="headerlink" href="#grouping-on-multiple-columns" title="Permalink to this headline">¶</a></h2>
+<h2>Grouping on Multiple Columns<a class="headerlink" href="#grouping-on-multiple-columns" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>We can group on multiple columns to get groups based on unique pairs of values. To do this, pass in a list of column labels into <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code>.</p>
 <div class="cell docutils container">
@@ -1067,7 +1065,7 @@
 </div>
 </div>
 <div class="section" id="pivoting">
-<h2><span class="section-number">9.3. </span>Pivoting<a class="headerlink" href="#pivoting" title="Permalink to this headline">¶</a></h2>
+<h2>Pivoting<a class="headerlink" href="#pivoting" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><strong>If you group by two columns, you can often use pivot to present your data in a more convenient format.</strong> Using a pivot lets you use one set of grouped labels as the columns of the resulting table.</p>
 <p>To pivot, use the <code class="docutils literal notranslate"><span class="pre">pd.pivot_table()</span></code> function.</p>
@@ -1277,7 +1275,7 @@
 </div>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">9.4. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>We now have the most popular baby names for each sex and year in our dataset and learned to express the following operations in <code class="docutils literal notranslate"><span class="pre">pandas</span></code>:</p>
 <table class="colwidths-auto table">
@@ -1387,48 +1385,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../03/Functions%20and%20Exceptions.html">
    6. Functions and Exceptions
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Data Wrangling with Python
- </span>
-</p>
-<ul class="current nav bd-sidenav nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="NumPy.html">
-   7. Introduction to Numpy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20Intro.html">
-   8. DataFrames in Python
-  </a>
- </li>
- <li class="toctree-l1 current active active">
-  <a class="current reference internal" href="#">
-   9. Grouping and Pivoting
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Merge%20and%20Concat%20Dataset.html">
-   10. Working with Multiple DataFrames
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Pandas%20apply%20strings%20and%20plotting.html">
-   11. Applying Functions and Plotting in Pandas
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../05/sql%20intro.html">
-   12. Relational Databases and SQL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../06/viz%20intro.html">
-   13. Data Visualization
   </a>
  </li>
 </ul>
