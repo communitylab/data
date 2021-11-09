@@ -22,7 +22,7 @@ string
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_1894/41168278.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_2499/41168278.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mstring[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'string' is not defined
